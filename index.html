@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miao Chen | Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Miao Chen, graduate student in physics working on non-equilibrium statistical physics, dynamic hysteresis, and information thermodynamics." />
+  <style>
+    :root {
+      --text: #222;
+      --muted: #666;
+      --light: #f6f7f9;
+      --line: #e5e7eb;
+      --accent: #9b1c1c;
+      --accent-soft: #f7eaea;
+      --link: #1f5f99;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background: #fff;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 42px 24px 60px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 56px;
+    }
+
+    aside {
+      align-self: start;
+      position: sticky;
+      top: 86px;
+    }
+
+    .portrait {
+      width: 178px;
+      height: 178px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 28%, #ffffff 0%, #dfe7ef 24%, #7390a9 62%, #40556a 100%);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+      margin-bottom: 22px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .profile h1 {
+      font-size: 1.55rem;
+      margin: 0 0 6px;
+      line-height: 1.2;
+    }
+
+    .profile .role {
+      color: var(--muted);
+      margin-bottom: 18px;
+      line-height: 1.45;
+    }
+
+    .profile-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .profile-list li {
+      margin: 8px 0;
+    }
+
+    main {
+      max-width: 760px;
+    }
+
+    section {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 1.18rem;
+      margin: 18px 0 8px;
+    }
+
+    .lead {
+      font-size: 1.04rem;
+      color: #333;
+    }
+
+    .question-list {
+      margin: 14px 0 0;
+      padding-left: 1.3rem;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 12px 14px;
+      background: var(--light);
+      border-left: 4px solid var(--accent);
+      color: #333;
+      font-size: 0.96rem;
+    }
+
+    .news {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news li {
+      display: grid;
+      grid-template-columns: 98px minmax(0, 1fr);
+      gap: 14px;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .date {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .theme {
+      margin: 28px 0 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #111;
+    }
+
+    .theme::before {
+      content: "▶";
+      color: #111;
+      margin-right: 8px;
+      font-size: 0.88rem;
+    }
+
+    .pub-card {
+      display: grid;
+      grid-template-columns: 138px minmax(0, 1fr);
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .thumb {
+      height: 98px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, rgba(155,28,28,0.12), rgba(31,95,153,0.12)),
+        repeating-linear-gradient(45deg, #ffffff 0, #ffffff 7px, #f1f3f5 7px, #f1f3f5 14px);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .pub-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 4px;
+      line-height: 1.35;
+    }
+
+    .authors,
+    .venue {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 2px 0;
+    }
+
+    .highlight {
+      margin-top: 8px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .highlight::before {
+      content: "■";
+      color: var(--accent);
+      margin-right: 7px;
+      font-size: 0.75rem;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 28px;
+      }
+
+      aside {
+        position: static;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 22px;
+        align-items: center;
+      }
+
+      .portrait {
+        width: 120px;
+        height: 120px;
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+
+      .pub-card {
+        grid-template-columns: 1fr;
+      }
+
+      .thumb {
+        height: 86px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      aside {
+        grid-template-columns: 1fr;
+      }
+
+      .news li {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top">Miao Chen 陈苗</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top" class="layout">
+    <aside class="profile">
+      <div class="portrait">MC</div>
+      <div>
+        <h1>Miao Chen 陈苗</h1>
+        <div class="role">
+          Graduate Student in Physics<br />
+          Beijing Normal University
+        </div>
+        <ul class="profile-list">
+          <li>📍 Beijing, China</li>
+          <li>✉️ <a href="mailto:your.email@bnu.edu.cn">your.email@bnu.edu.cn</a></li>
+          <li>🎓 <a href="https://scholar.google.com/citations?user=HqSndnwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li>🧾 <a href="#cv">Academic CV</a></li>
+          <li>🔬 Non-equilibrium statistical physics</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main>
+      <section id="about">
+        <h2>About me</h2>
+        <p class="lead">
+          Hello! I am Miao Chen, a graduate student in physics at Beijing Normal University. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
+        </p>
+        <p>
+          I am interested in how driven many-body systems respond across different time and length scales, and how universal constraints emerge from microscopic dynamics. Recent projects include coercivity landscapes in dynamic hysteresis and finite-time thermodynamics of autonomous information machines.
+        </p>
+        <ul class="question-list">
+          <li>How can we organize complex hysteresis dynamics into a unified scaling landscape?</li>
+          <li>What universal behavior appears when finite driving time and finite system size compete?</li>
+          <li>How do information, dissipation, and thermodynamic performance constrain small engines?</li>
+        </ul>
+        <div class="note">
+          If my research resonates with you, please feel free to contact me by email.
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <li><span class="date">2026.03</span><span>Our work on finite-time and finite-size scalings of coercivity appeared in <em>Physical Review E</em>.</span></li>
+          <li><span class="date">2026.03</span><span>Our work on coercivity landscapes appeared in <em>Physical Review Letters</em> as an Editors’ Suggestion.</span></li>
+          <li><span class="date">2026.04</span><span>A preprint on finite-time thermodynamics of an autonomous information machine is available on arXiv.</span></li>
+          <li><span class="date">2024.03</span><span>Our paper on Rényi entanglement asymmetry in conformal field theories appeared in <em>Physical Review D</em>.</span></li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="theme">Dynamic hysteresis and coercivity landscapes</div>
+        <article class="pub-card">
+          <div class="thumb">Add figure<br />hysteresis landscape</div>
+          <div>
+            <p class="pub-title">Coercivity Landscape Characterizes Dynamic Hysteresis</p>
+            <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma</p>
+            <p class="venue"><em>Physical Review Letters</em> 136, 117102 (2026). Editors’ Suggestion.</p>
+            <p class="highlight">A unified landscape picture for dynamic hysteresis across slow-to-fast driving regimes.</p>
+            <div class="tag-row">
+              <span class="tag">PRL</span><span class="tag">Editors’ Suggestion</span><span class="tag">Hysteresis</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="thumb">Add figure<br />finite-time / finite-size</div>
+          <div>
+            <p class="pub-title">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</p>
+            <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma</p>
+            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026).</p>
+            <p class="highlight">Finite-time and finite-size effects jointly shape coercivity scaling and plateau behavior.</p>
+            <div class="tag-row">
+              <span class="tag">PRE</span><span class="tag">Scaling</span><span class="tag">Finite-size effects</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="theme">Information thermodynamics</div>
+        <article class="pub-card">
+          <div class="thumb">Add figure<br />information machine</div>
+          <div>
+            <p class="pub-title">Finite-Time Thermodynamics of an Autonomous Information Machine</p>
+            <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma</p>
+            <p class="venue">arXiv:2604.15953 (2026).</p>
+            <p class="highlight">Finite-time performance and thermodynamic trade-offs in an autonomous information machine.</p>
+            <div class="tag-row">
+              <span class="tag">Preprint</span><span class="tag">Information engine</span><span class="tag">Finite-time thermodynamics</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="theme">Quantum many-body theory</div>
+        <article class="pub-card">
+          <div class="thumb">Add figure<br />CFT / asymmetry</div>
+          <div>
+            <p class="pub-title">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</p>
+            <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen</p>
+            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024).</p>
+            <p class="highlight">Entanglement asymmetry as a diagnostic of symmetry breaking in conformal field theories.</p>
+            <div class="tag-row">
+              <span class="tag">PRD</span><span class="tag">CFT</span><span class="tag">Entanglement</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="cv">
+        <h2>CV</h2>
+        <p>
+          A PDF version of my academic CV is available here: <a href="miao_chen_academic_cv.pdf">Download CV</a>.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          School of Physics and Astronomy, Beijing Normal University<br />
+          Beijing, China<br />
+          Email: <a href="mailto:your.email@bnu.edu.cn">your.email@bnu.edu.cn</a>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    © 2026 Miao Chen. Built as a lightweight academic homepage. Replace placeholder email, photo, and links before publishing.
+  </footer>
+</body>
+</html>
