@@ -164,8 +164,9 @@
 
     .edu-item {
       display: grid;
-      grid-template-columns: 120px minmax(0, 1fr);
-      gap: 18px;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
       padding: 14px 0;
       border-bottom: 1px solid var(--line);
     }
@@ -173,7 +174,17 @@
     .edu-years {
       color: var(--muted);
       font-variant-numeric: tabular-nums;
-      white-space: nowrap;
+      white-space: normal;
+      line-height: 1.35;
+      min-width: 0;
+    }
+
+    .edu-years .date-line {
+      display: block;
+    }
+
+    .edu-years .date-line + .date-line::before {
+      content: "– ";
     }
 
     .edu-degree {
@@ -271,6 +282,11 @@
       color: var(--muted);
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
+    }
+
+    .news-highlight {
+      color: var(--accent);
+      font-weight: 700;
     }
 
     .theme {
@@ -446,6 +462,19 @@
       margin-bottom: 22px;
     }
 
+    .cv-full .education-list {
+      gap: 10px;
+    }
+
+    .cv-full .edu-item {
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .cv-full .edu-years {
+      font-size: 0.96rem;
+    }
+
     .footer {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -518,12 +547,10 @@
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top">Miao Chen 陈苗 (泓樾）</a>
       <div class="navlinks">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
+        <a href="#about">Me</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -553,7 +580,7 @@
       <section id="about">
         <h2>About me</h2>
         <p class="lead">
-          Hello! I am Miao Chen, a graduate student in physics at Beijing Normal University. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
+          Hello! I am Miao Chen, a graduate student in physics at Beijing Normal University. I am pursuing an M.Sc. in Theoretical Physics at BNU, following my B.Sc. in Physics from Jiangxi Normal University in 2024. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
         </p>
         <p>
           I am interested in how driven many-body systems respond across different time and length scales, and how universal constraints emerge from microscopic dynamics. Recent projects include coercivity landscapes in dynamic hysteresis and finite-time thermodynamics of autonomous information machines.
@@ -565,28 +592,6 @@
         </ul>
         <div class="note">
           If my research resonates with you, please feel free to contact me by email.
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="education-list">
-          <div class="edu-item">
-            <div class="edu-years">Sep. 2024&ndash;present</div>
-            <div>
-              <div class="edu-degree">M.Sc. in Theoretical Physics</div>
-              <div class="edu-school">Beijing Normal University</div>
-              <div class="edu-note">Advisor: <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a> &middot; GPA: 3.8/4</div>
-            </div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-years">Sep. 2020&ndash;Jun. 2024</div>
-            <div>
-              <div class="edu-degree">B.Sc. in Physics</div>
-              <div class="edu-school">Jiangxi Normal University</div>
-              <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -683,7 +688,7 @@
             <h3>Education</h3>
             <div class="education-list">
               <div class="edu-item">
-                <div class="edu-years">Sep. 2024&ndash;present</div>
+                <div class="edu-years"><span class="date-line">Sep. 2024</span><span class="date-line">present</span></div>
                 <div>
                   <div class="edu-degree">M.Sc. in Theoretical Physics</div>
                   <div class="edu-school">Beijing Normal University, Beijing, China</div>
@@ -691,7 +696,7 @@
                 </div>
               </div>
               <div class="edu-item">
-                <div class="edu-years">Sep. 2020&ndash;Jun. 2024</div>
+                <div class="edu-years"><span class="date-line">Sep. 2020</span><span class="date-line">Jun. 2024</span></div>
                 <div>
                   <div class="edu-degree">B.Sc. in Physics</div>
                   <div class="edu-school">Jiangxi Normal University, Nanchang, China</div>
@@ -762,14 +767,6 @@
         </div>
       </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          School of Physics and Astronomy, Beijing Normal University<br />
-          Beijing, China<br />
-          Email: <a href="mailto:miaochen@mail.bnu.edu.cn">miaochen@mail.bnu.edu.cn</a>
-        </p>
-      </section>
     </main>
   </div>
 
