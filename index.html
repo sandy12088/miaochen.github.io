@@ -87,15 +87,10 @@
       width: 178px;
       height: 178px;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 28%, #ffffff 0%, #dfe7ef 24%, #7390a9 62%, #40556a 100%);
+      object-fit: cover;
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
       margin-bottom: 22px;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      display: block;
     }
 
     .profile h1 {
@@ -161,6 +156,37 @@
       font-size: 0.96rem;
     }
 
+    .education-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .edu-item {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 18px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .edu-years {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .edu-school,
+    .edu-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .news {
       list-style: none;
       padding: 0;
@@ -197,14 +223,14 @@
 
     .pub-card {
       display: grid;
-      grid-template-columns: 138px minmax(0, 1fr);
+      grid-template-columns: 154px minmax(0, 1fr);
       gap: 20px;
       padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .thumb {
-      height: 98px;
+      height: 108px;
       border-radius: 12px;
       background:
         linear-gradient(135deg, rgba(155,28,28,0.12), rgba(31,95,153,0.12)),
@@ -212,10 +238,27 @@
       border: 1px solid var(--line);
       display: grid;
       place-items: center;
-      color: var(--muted);
-      font-size: 0.78rem;
-      text-align: center;
-      padding: 10px;
+      overflow: hidden;
+    }
+
+    .thumb img,
+    .thumb object,
+    .thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .thumb img {
+      object-fit: cover;
+    }
+
+    .thumb.contain img {
+      object-fit: contain;
+      background: #fff;
+      padding: 4px;
     }
 
     .pub-title {
@@ -244,6 +287,16 @@
       color: var(--accent);
       margin-right: 7px;
       font-size: 0.75rem;
+    }
+
+    .pub-links {
+      margin-top: 8px;
+      font-size: 0.92rem;
+    }
+
+    .pub-links a {
+      margin-right: 12px;
+      white-space: nowrap;
     }
 
     .tag-row {
@@ -290,7 +343,6 @@
       .portrait {
         width: 120px;
         height: 120px;
-        font-size: 2rem;
         margin-bottom: 0;
       }
 
@@ -299,7 +351,12 @@
       }
 
       .thumb {
-        height: 86px;
+        height: 150px;
+      }
+
+      .edu-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
       }
     }
 
@@ -327,6 +384,7 @@
       <a class="brand" href="#top">Miao Chen 陈苗</a>
       <div class="navlinks">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#cv">CV</a>
@@ -348,6 +406,7 @@
           <li>📍 Beijing, China</li>
           <li>✉️ <a href="mailto:miaochen@bnu.edu.cn">miaochen@bnu.edu.cn</a></li>
           <li>🎓 <a href="https://scholar.google.com/citations?user=HqSndnwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li>🔗 <a href="https://www.researchgate.net/profile/Chen-Miao-17" target="_blank" rel="noopener">ResearchGate</a></li>
           <li>🧾 <a href="#cv">Academic CV</a></li>
           <li>🔬 Non-equilibrium statistical physics</li>
         </ul>
@@ -356,6 +415,7 @@
 
     <main>
       <section id="about">
+        <h2>About me</h2>
         <p class="lead">
           Hello! I am Miao Chen, a graduate student in physics at Beijing Normal University. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
         </p>
@@ -369,6 +429,27 @@
         </ul>
         <div class="note">
           If my research resonates with you, please feel free to contact me by email.
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-list">
+          <div class="edu-item">
+            <div class="edu-years">2024&ndash;present</div>
+            <div>
+              <div class="edu-degree">M.Sc. in Theoretical Physics</div>
+              <div class="edu-school">Beijing Normal University</div>
+              <div class="edu-note">Advisor: Prof. Yu-Han Ma</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-years">2020&ndash;2024</div>
+            <div>
+              <div class="edu-degree">B.Sc. in Physics</div>
+              <div class="edu-school">Jiangxi Normal University</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -387,12 +468,17 @@
 
         <div class="theme">Dynamic hysteresis and coercivity landscapes</div>
         <article class="pub-card">
-          <div class="thumb">Add figure<br />hysteresis landscape</div>
+          <div class="thumb contain">
+            <img src="images/coercivity_landscape.png" alt="Coercivity landscape figure">
+          </div>
           <div>
             <p class="pub-title">Coercivity Landscape Characterizes Dynamic Hysteresis</p>
             <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma</p>
-            <p class="venue"><em>Physical Review Letters</em> 136, 117102 (2026). Editors’ Suggestion.</p>
+            <p class="venue"><em>Physical Review Letters</em> 136, 117102 (2026). Editors’ Suggestion. DOI: 10.1103/5rg8-52gl.</p>
             <p class="highlight">A unified landscape picture for dynamic hysteresis across slow-to-fast driving regimes.</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a>
+            </div>
             <div class="tag-row">
               <span class="tag">PRL</span><span class="tag">Editors’ Suggestion</span><span class="tag">Hysteresis</span>
             </div>
@@ -400,12 +486,20 @@
         </article>
 
         <article class="pub-card">
-          <div class="thumb">Add figure<br />finite-time / finite-size</div>
+          <div class="thumb">
+            <object data="images/phi4_coercivity_lines_a.pdf#page=1" type="application/pdf">
+              <a href="images/phi4_coercivity_lines_a.pdf">View figure</a>
+            </object>
+          </div>
           <div>
             <p class="pub-title">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</p>
             <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma</p>
-            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026).</p>
+            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026). DOI: 10.1103/mzvj-n6vn.</p>
             <p class="highlight">Finite-time and finite-size effects jointly shape coercivity scaling and plateau behavior.</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a>
+              <a href="images/phi4_coercivity_lines_a.pdf" target="_blank" rel="noopener">Figure PDF</a>
+            </div>
             <div class="tag-row">
               <span class="tag">PRE</span><span class="tag">Scaling</span><span class="tag">Finite-size effects</span>
             </div>
@@ -414,12 +508,18 @@
 
         <div class="theme">Information thermodynamics</div>
         <article class="pub-card">
-          <div class="thumb">Add figure<br />information machine</div>
+          <div class="thumb contain">
+            <img src="images/demon.png" alt="Autonomous information machine figure">
+          </div>
           <div>
             <p class="pub-title">Finite-Time Thermodynamics of an Autonomous Information Machine</p>
             <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma</p>
-            <p class="venue">arXiv:2604.15953 (2026).</p>
+            <p class="venue">arXiv:2604.15953 (2026). DOI: 10.48550/arXiv.2604.15953.</p>
             <p class="highlight">Finite-time performance and thermodynamic trade-offs in an autonomous information machine.</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a>
+              <a href="https://arxiv.org/abs/2604.15953" target="_blank" rel="noopener">arXiv</a>
+            </div>
             <div class="tag-row">
               <span class="tag">Preprint</span><span class="tag">Information engine</span><span class="tag">Finite-time thermodynamics</span>
             </div>
@@ -428,12 +528,17 @@
 
         <div class="theme">Quantum many-body theory</div>
         <article class="pub-card">
-          <div class="thumb">Add figure<br />CFT / asymmetry</div>
+          <div class="thumb contain">
+            <img src="images/entangle.png" alt="Entanglement asymmetry figure">
+          </div>
           <div>
             <p class="pub-title">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</p>
             <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen</p>
-            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024).</p>
+            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024). DOI: 10.1103/PhysRevD.109.065009.</p>
             <p class="highlight">Entanglement asymmetry as a diagnostic of symmetry breaking in conformal field theories.</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a>
+            </div>
             <div class="tag-row">
               <span class="tag">PRD</span><span class="tag">CFT</span><span class="tag">Entanglement</span>
             </div>
@@ -453,14 +558,14 @@
         <p>
           School of Physics and Astronomy, Beijing Normal University<br />
           Beijing, China<br />
-          Email: <a href="mailto:your.email@bnu.edu.cn">your.email@bnu.edu.cn</a>
+          Email: <a href="mailto:miaochen@bnu.edu.cn">miaochen@bnu.edu.cn</a>
         </p>
       </section>
     </main>
   </div>
 
   <footer class="footer">
-    © 2026 Miao Chen. Built as a lightweight academic homepage. Replace placeholder email, photo, and links before publishing.
+    © 2026 Miao Chen. Built as a lightweight academic homepage.
   </footer>
 </body>
 </html>
