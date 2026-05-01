@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% ---------- Formatting ----------
+\definecolor{cvblue}{HTML}{1F4E79}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\pagenumbering{gobble}
+\urlstyle{same}
+
+\titleformat{\section}
+  {\large\bfseries\color{cvblue}}
+  {}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\newcommand{\cvitem}[2]{%
+  \noindent\begin{tabular}{@{}p{0.18\textwidth}@{\hspace{0.03\textwidth}}p{0.77\textwidth}@{}}
+    \textbf{#1} & \begin{minipage}[t]{0.77\textwidth}\RaggedRight #2\end{minipage}
+  \end{tabular}\par\vspace{3pt}
+}
+
+\newcommand{\pubitem}[1]{\item \justifying #1}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.6em, itemsep=4pt, topsep=2pt}
+
+% ---------- Document ----------
+\begin{document}
+
+% ---------- Header ----------
+{\LARGE \textbf{Miao Chen}}\\[-1pt]
+Graduate Student in Physics \,|\, School of Physics and Astronomy, Beijing Normal University\\
+Key Laboratory of Multiscale Spin Physics, Ministry of Education, Beijing Normal University\\
+Email: \href{mailto:YOUR_EMAIL@mail.bnu.edu.cn}{YOUR\_EMAIL@mail.bnu.edu.cn}\\
+Google Scholar: \href{https://scholar.google.com/citations?user=HqSndnwAAAAJ}{scholar.google.com/citations?user=HqSndnwAAAAJ} \quad
+ORCID: YOUR-ORCID\\[-2pt]
+Last updated: May 2026
+
+\section{Research Interests}
+Non-equilibrium statistical physics; dynamic hysteresis and first-order phase transitions; finite-time and finite-size scaling; information thermodynamics; quantum many-body theory and conformal field theory.
+
+\section{Education}
+\cvitem{20XX--present}{Graduate Student in Physics, Beijing Normal University, Beijing, China.\newline
+Advisor: Prof. Yu-Han Ma.}
+\cvitem{20XX--20XX}{B.S. in Physics, University Name, City, Country.}
+
+\section{Research Experience}
+\cvitem{20XX--present}{Graduate Researcher, School of Physics and Astronomy, Beijing Normal University.\newline
+Research on non-equilibrium dynamics, dynamic hysteresis, coercivity landscapes, finite-time/finite-size scaling, and information thermodynamics.}
+
+\section{Publications}
+\textit{An asterisk (*) denotes equal contribution.}
+\begin{enumerate}
+  \pubitem{Wanyan Chen*, \textbf{Miao Chen}*, and Yu-Han Ma, ``Finite-Time Thermodynamics of an Autonomous Information Machine,'' \textit{arXiv:2604.15953} (2026).}
+
+  \pubitem{\textbf{Miao Chen}*, Xiu-Hua Zhao*, and Yu-Han Ma, ``Coercivity Landscape Characterizes Dynamic Hysteresis,'' \textit{Physical Review Letters} \textbf{136}, 117102 (2026). DOI: \href{https://doi.org/10.1103/5rg8-52gl}{10.1103/5rg8-52gl}. \textit{Editors' Suggestion}.}
+
+  \pubitem{\textbf{Miao Chen}, Xiu-Hua Zhao, and Yu-Han Ma, ``Finite-time and finite-size scalings of coercivity in dynamic hysteresis,'' \textit{Physical Review E} \textbf{113}, 034124 (2026). DOI: \href{https://doi.org/10.1103/mzvj-n6vn}{10.1103/mzvj-n6vn}.}
+
+  \pubitem{\textbf{Miao Chen} and Hui-Huang Chen, ``R\'enyi entanglement asymmetry in (1+1)-dimensional conformal field theories,'' \textit{Physical Review D} \textbf{109}, 065009 (2024). DOI: \href{https://doi.org/10.1103/PhysRevD.109.065009}{10.1103/PhysRevD.109.065009}.}
+\end{enumerate}
+
+\section{Manuscripts and Preprints}
+\begin{itemize}
+  \item Add preprints under review, manuscripts in preparation, or conference proceedings here.
+\end{itemize}
+
+\section{Selected Presentations}
+\begin{itemize}
+  \item ``Presentation Title,'' Conference or Seminar Name, Institution, City, Country, Month Year.
+  \item ``Presentation Title,'' Conference or Seminar Name, Institution, City, Country, Month Year.
+\end{itemize}
+
+\section{Honors and Awards}
+\begin{itemize}
+  \item Award Name, Institution, Year.
+  \item Scholarship or Fellowship Name, Institution, Year.
+\end{itemize}
+
+\section{Teaching Experience}
+\begin{itemize}
+  \item Teaching Assistant, Course Name, Beijing Normal University, Semester Year.
+\end{itemize}
+
+\section{Technical Skills}
+\cvitem{Programming}{Python, MATLAB, LaTeX. Add C/C++, Julia, Mathematica, or other tools if applicable.}
+\cvitem{Methods}{Stochastic simulations, finite-size scaling analysis, numerical solution of dynamical equations, data visualization.}
+
+\section{References}
+Available upon request. Alternatively, list 2--3 referees with title, affiliation, and email.
+
+\end{document}
