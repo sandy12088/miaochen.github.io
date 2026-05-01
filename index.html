@@ -223,42 +223,43 @@
 
     .pub-card {
       display: grid;
-      grid-template-columns: 154px minmax(0, 1fr);
-      gap: 20px;
+      grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
       padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .thumb {
-      height: 108px;
+      width: 100%;
       border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(155,28,28,0.12), rgba(31,95,153,0.12)),
-        repeating-linear-gradient(45deg, #ffffff 0, #ffffff 7px, #f1f3f5 7px, #f1f3f5 14px);
+      background: #fff;
       border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
       overflow: hidden;
+      display: block;
     }
 
-    .thumb img,
-    .thumb object,
-    .thumb iframe {
+    .thumb img {
       width: 100%;
-      height: 100%;
+      height: auto;
       border: 0;
       border-radius: 12px;
       display: block;
     }
 
-    .thumb img {
-      object-fit: cover;
+    .thumb object,
+    .thumb iframe {
+      width: 100%;
+      min-height: 128px;
+      aspect-ratio: 4 / 3;
+      border: 0;
+      border-radius: 12px;
+      display: block;
+      background: #fff;
     }
 
-    .thumb.contain img {
-      object-fit: contain;
-      background: #fff;
-      padding: 4px;
+    .thumb.contain {
+      padding: 0;
     }
 
     .pub-title {
@@ -267,6 +268,14 @@
       color: #111;
       margin: 0 0 4px;
       line-height: 1.35;
+    }
+
+    .pub-title a {
+      color: #111;
+    }
+
+    .pub-title a:hover {
+      color: var(--link);
     }
 
     .authors,
@@ -351,7 +360,7 @@
       }
 
       .thumb {
-        height: 150px;
+        max-width: 260px;
       }
 
       .edu-item {
@@ -472,13 +481,10 @@
             <img src="images/coercivity_landscape.png" alt="Coercivity landscape figure">
           </div>
           <div>
-            <p class="pub-title">Coercivity Landscape Characterizes Dynamic Hysteresis</p>
+            <p class="pub-title"><a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a></p>
             <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma</p>
-            <p class="venue"><em>Physical Review Letters</em> 136, 117102 (2026). Editors’ Suggestion. DOI: 10.1103/5rg8-52gl.</p>
+            <p class="venue"><em>Physical Review Letters</em> 136, 117102 (2026). Editors’ Suggestion.</p>
             <p class="highlight">A unified landscape picture for dynamic hysteresis across slow-to-fast driving regimes.</p>
-            <div class="pub-links">
-              <a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
               <span class="tag">PRL</span><span class="tag">Editors’ Suggestion</span><span class="tag">Hysteresis</span>
             </div>
@@ -492,12 +498,11 @@
             </object>
           </div>
           <div>
-            <p class="pub-title">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</p>
+            <p class="pub-title"><a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a></p>
             <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma</p>
-            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026). DOI: 10.1103/mzvj-n6vn.</p>
+            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026).</p>
             <p class="highlight">Finite-time and finite-size effects jointly shape coercivity scaling and plateau behavior.</p>
             <div class="pub-links">
-              <a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a>
               <a href="images/phi4_coercivity_lines_a.pdf" target="_blank" rel="noopener">Figure PDF</a>
             </div>
             <div class="tag-row">
@@ -512,12 +517,11 @@
             <img src="images/demon.png" alt="Autonomous information machine figure">
           </div>
           <div>
-            <p class="pub-title">Finite-Time Thermodynamics of an Autonomous Information Machine</p>
+            <p class="pub-title"><a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a></p>
             <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma</p>
-            <p class="venue">arXiv:2604.15953 (2026). DOI: 10.48550/arXiv.2604.15953.</p>
+            <p class="venue">arXiv:2604.15953 (2026).</p>
             <p class="highlight">Finite-time performance and thermodynamic trade-offs in an autonomous information machine.</p>
             <div class="pub-links">
-              <a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a>
               <a href="https://arxiv.org/abs/2604.15953" target="_blank" rel="noopener">arXiv</a>
             </div>
             <div class="tag-row">
@@ -532,13 +536,10 @@
             <img src="images/entangle.png" alt="Entanglement asymmetry figure">
           </div>
           <div>
-            <p class="pub-title">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</p>
+            <p class="pub-title"><a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a></p>
             <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen</p>
-            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024). DOI: 10.1103/PhysRevD.109.065009.</p>
+            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024).</p>
             <p class="highlight">Entanglement asymmetry as a diagnostic of symmetry breaking in conformal field theories.</p>
-            <div class="pub-links">
-              <a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
               <span class="tag">PRD</span><span class="tag">CFT</span><span class="tag">Entanglement</span>
             </div>
