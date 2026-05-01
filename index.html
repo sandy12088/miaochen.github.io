@@ -187,7 +187,6 @@
       font-size: 0.95rem;
     }
 
-
     .experience-list {
       display: grid;
       gap: 20px;
@@ -405,6 +404,48 @@
       font-weight: 600;
     }
 
+    .cv-full {
+      margin-top: 26px;
+      padding-top: 8px;
+    }
+
+    .cv-block {
+      margin-top: 28px;
+    }
+
+    .cv-block h3 {
+      font-size: 1.18rem;
+      margin: 0 0 12px;
+      color: #111;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+    }
+
+    .cv-compact {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .cv-compact li {
+      margin: 7px 0;
+    }
+
+    .cv-publications {
+      margin: 0;
+      padding-left: 1.35rem;
+    }
+
+    .cv-publications li {
+      margin: 10px 0;
+    }
+
+    .cv-download-note {
+      padding: 12px 14px;
+      background: var(--light);
+      border-left: 4px solid var(--accent);
+      margin-bottom: 22px;
+    }
+
     .footer {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -479,11 +520,8 @@
       <div class="navlinks">
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#research">Research</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#conferences">Conferences</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </div>
@@ -548,37 +586,6 @@
               <div class="edu-school">Jiangxi Normal University</div>
               <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="research">
-        <h2>Research Experience</h2>
-        <div class="experience-list">
-          <div class="exp-item">
-            <div class="exp-header">
-              <div class="exp-title">School of Physics and Astronomy, Beijing Normal University</div>
-              <div class="exp-years">Dec. 2023&ndash;present</div>
-            </div>
-            <div class="exp-note">Advisor: Prof. Yu-Han Ma</div>
-            <ul class="exp-list">
-              <li>Developed a coercivity-landscape framework to characterize finite-time and finite-size scaling behaviors in dynamic hysteresis using renormalization techniques.</li>
-              <li>Performed kinetic Monte Carlo simulations of the two-dimensional Ising model in driven systems.</li>
-              <li>Studied finite-time thermodynamics and performance trade-offs in information machines.</li>
-            </ul>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-header">
-              <div class="exp-title">Department of Physics, Jiangxi Normal University</div>
-              <div class="exp-years">Feb. 2023&ndash;Jun. 2024</div>
-            </div>
-            <div class="exp-note">Advisor: Prof. Hui-Huang Chen</div>
-            <ul class="exp-list">
-              <li>Investigated symmetry breaking and entanglement-related quantities in conformal field theories.</li>
-              <li>Implemented numerical tests of CFT predictions using exactly solvable lattice models.</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -658,47 +665,101 @@
           </div>
         </article>
 
-        <div class="theme">Physics education and visualization</div>
-        <article class="pub-card">
-          <div class="thumb placeholder">
-            College Physics<br />theoretical study and visualization
-          </div>
-          <div>
-            <p class="pub-title"><a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a></p>
-            <p class="authors"><strong>Miao Chen</strong> and Qin Guo</p>
-            <p class="venue"><em>College Physics</em> 43(4), 65&ndash;68, 80 (2024). [in Chinese]</p>
-            <p class="highlight">A theoretical and visualized treatment of the winding problem for physics education.</p>
-            <div class="tag-row">
-              <span class="tag">Physics education</span><span class="tag">Visualization</span>
-            </div>
-          </div>
-        </article>
-
-      </section>
-
-      <section id="teaching">
-        <h2>Teaching Experience</h2>
-        <ul class="teaching-list">
-          <li>Teaching Assistant, University Physics at BNU, 2025.</li>
-          <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
-        </ul>
-      </section>
-
-      <section id="conferences">
-        <h2>Conferences</h2>
-        <ul class="conference-list">
-          <li>
-            <span class="conf-title">International Conference on Statistical Physics (29th)</span>, Florence, Italy.<br />
-            <span class="conf-meta">Poster: <em>Coercivity Panorama of Dynamic Hysteresis</em>. Jul. 13&ndash;18, 2025.</span>
-          </li>
-        </ul>
       </section>
 
       <section id="cv">
         <h2>CV</h2>
-        <p>
+        <p class="cv-download-note">
           A PDF version of my academic CV is available here: <a href="miao_chen_academic_cv.pdf">Download CV</a>.
         </p>
+
+        <div class="cv-full">
+          <div class="cv-block">
+            <h3>Research Interests</h3>
+            <p>Non-equilibrium statistical physics; phase transitions; information thermodynamics.</p>
+          </div>
+
+          <div class="cv-block">
+            <h3>Education</h3>
+            <div class="education-list">
+              <div class="edu-item">
+                <div class="edu-years">Sep. 2024&ndash;present</div>
+                <div>
+                  <div class="edu-degree">M.Sc. in Theoretical Physics</div>
+                  <div class="edu-school">Beijing Normal University, Beijing, China</div>
+                  <div class="edu-note">Advisor: <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a> &middot; GPA: 3.8/4</div>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-years">Sep. 2020&ndash;Jun. 2024</div>
+                <div>
+                  <div class="edu-degree">B.Sc. in Physics</div>
+                  <div class="edu-school">Jiangxi Normal University, Nanchang, China</div>
+                  <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-block">
+            <h3>Publications</h3>
+            <ol class="cv-publications">
+              <li><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma, “<a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a>,” <em>Physical Review Letters</em> <strong>136</strong>, 117102 (2026). <span class="news-highlight">Editors’ Suggestion</span>.</li>
+              <li><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma, “<a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a>,” <em>Physical Review E</em> <strong>113</strong>, 034124 (2026).</li>
+              <li>Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma, “<a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a>,” <em>arXiv:2604.15953</em> (2026).</li>
+              <li><strong>Miao Chen</strong> and Hui-Huang Chen, “<a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a>,” <em>Physical Review D</em> <strong>109</strong>, 065009 (2024).</li>
+              <li><strong>Miao Chen</strong> and Qin Guo, “<a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a>,” <em>College Physics</em> <strong>43</strong>(4), 65&ndash;68, 80 (2024). [in Chinese]</li>
+            </ol>
+            <p class="edu-note">* denotes equal contribution.</p>
+          </div>
+
+          <div class="cv-block">
+            <h3>Research Experience</h3>
+            <div class="experience-list">
+              <div class="exp-item">
+                <div class="exp-header">
+                  <div class="exp-title">School of Physics and Astronomy, Beijing Normal University</div>
+                  <div class="exp-years">Dec. 2023&ndash;present</div>
+                </div>
+                <div class="exp-note">Advisor: Prof. Yu-Han Ma</div>
+                <ul class="exp-list">
+                  <li>Developed a coercivity-landscape framework to characterize finite-time and finite-size scaling behaviors in dynamic hysteresis using renormalization techniques.</li>
+                  <li>Performed kinetic Monte Carlo simulations of the two-dimensional Ising model in driven systems.</li>
+                  <li>Studied finite-time thermodynamics and performance trade-offs in information machines.</li>
+                </ul>
+              </div>
+
+              <div class="exp-item">
+                <div class="exp-header">
+                  <div class="exp-title">Department of Physics, Jiangxi Normal University</div>
+                  <div class="exp-years">Feb. 2023&ndash;Jun. 2024</div>
+                </div>
+                <div class="exp-note">Advisor: Prof. Hui-Huang Chen</div>
+                <ul class="exp-list">
+                  <li>Investigated symmetry breaking and entanglement-related quantities in conformal field theories.</li>
+                  <li>Implemented numerical tests of CFT predictions using exactly solvable lattice models.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-block">
+            <h3>Teaching Experience</h3>
+            <ul class="teaching-list">
+              <li>Teaching Assistant, University Physics at BNU, 2025.</li>
+              <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Conferences</h3>
+            <ul class="conference-list">
+              <li><span class="conf-title">International Conference on Statistical Physics (29th)</span>, Florence, Italy.<br><span class="conf-meta">Poster: <em>Coercivity Panorama of Dynamic Hysteresis</em>. Jul. 13&ndash;18, 2025.</span></li>
+              <li><span class="conf-title">Progress in Quantum Machine Learning (2026)</span>, Beijing, China.<br><span class="conf-meta">Poster: <em>Coercivity Landscape Characterizes Dynamic Hysteresis</em>. May 10, 2026.</span></li>
+              <li><span class="conf-title">National Conference on Magnetics Theory (20th)</span>, Hangzhou, China.<br><span class="conf-meta">Poster: <em>Coercivity Landscape Characterizes Dynamic Hysteresis</em>. May 22&ndash;25, 2026.</span></li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="contact">
