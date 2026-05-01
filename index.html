@@ -187,6 +187,73 @@
       font-size: 0.95rem;
     }
 
+
+    .experience-list {
+      display: grid;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .exp-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .exp-years {
+      color: var(--muted);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .exp-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .exp-list {
+      margin: 8px 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .exp-list li {
+      margin: 4px 0;
+    }
+
+    .teaching-list,
+    .conference-list {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .teaching-list li,
+    .conference-list li {
+      margin: 8px 0;
+    }
+
+    .conf-title {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .conf-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .news {
       list-style: none;
       padding: 0;
@@ -205,11 +272,6 @@
       color: var(--muted);
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
-    }
-
-    .news-highlight {
-      color: var(--accent);
-      font-weight: 700;
     }
 
     .theme {
@@ -265,6 +327,19 @@
 
     .thumb.contain {
       padding: 0;
+    }
+
+    .thumb.placeholder {
+      min-height: 120px;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.86rem;
+      background:
+        linear-gradient(135deg, rgba(155,28,28,0.08), rgba(31,95,153,0.08)),
+        repeating-linear-gradient(45deg, #ffffff 0, #ffffff 7px, #f1f3f5 7px, #f1f3f5 14px);
     }
 
     .pub-title {
@@ -372,6 +447,11 @@
         grid-template-columns: 1fr;
         gap: 4px;
       }
+
+      .exp-header {
+        flex-direction: column;
+        gap: 2px;
+      }
     }
 
     @media (max-width: 560px) {
@@ -399,8 +479,11 @@
       <div class="navlinks">
         <a href="#about">About</a>
         <a href="#education">Education</a>
+        <a href="#research">Research</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#conferences">Conferences</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </div>
@@ -418,7 +501,8 @@
         </div>
         <ul class="profile-list">
           <li>📍 Beijing, China</li>
-          <li>✉️ <a href="mailto:miaochen@bnu.edu.cn">miaochen@bnu.edu.cn</a></li>
+          <li>✉️ <a href="mailto:miaochen@mail.bnu.edu.cn">miaochen@mail.bnu.edu.cn</a></li>
+          <li>🆔 <a href="https://orcid.org/0009-0009-4028-083X" target="_blank" rel="noopener">ORCID</a></li>
           <li>🎓 <a href="https://scholar.google.com/citations?user=HqSndnwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
           <li>🔗 <a href="https://www.researchgate.net/profile/Chen-Miao-17" target="_blank" rel="noopener">ResearchGate</a></li>
           <li>🧾 <a href="#cv">Academic CV</a></li>
@@ -450,19 +534,51 @@
         <h2>Education</h2>
         <div class="education-list">
           <div class="edu-item">
-            <div class="edu-years">2024&ndash;present</div>
+            <div class="edu-years">Sep. 2024&ndash;present</div>
             <div>
               <div class="edu-degree">M.Sc. in Theoretical Physics</div>
               <div class="edu-school">Beijing Normal University</div>
-              <div class="edu-note">Advisor: Prof. Yu-Han Ma</div>
+              <div class="edu-note">Advisor: <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a> &middot; GPA: 3.8/4</div>
             </div>
           </div>
           <div class="edu-item">
-            <div class="edu-years">2020&ndash;2024</div>
+            <div class="edu-years">Sep. 2020&ndash;Jun. 2024</div>
             <div>
               <div class="edu-degree">B.Sc. in Physics</div>
               <div class="edu-school">Jiangxi Normal University</div>
+              <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="research">
+        <h2>Research Experience</h2>
+        <div class="experience-list">
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">School of Physics and Astronomy, Beijing Normal University</div>
+              <div class="exp-years">Dec. 2023&ndash;present</div>
+            </div>
+            <div class="exp-note">Advisor: Prof. Yu-Han Ma</div>
+            <ul class="exp-list">
+              <li>Developed a coercivity-landscape framework to characterize finite-time and finite-size scaling behaviors in dynamic hysteresis using renormalization techniques.</li>
+              <li>Performed kinetic Monte Carlo simulations of the two-dimensional Ising model in driven systems.</li>
+              <li>Studied finite-time thermodynamics and performance trade-offs in information machines.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-title">Department of Physics, Jiangxi Normal University</div>
+              <div class="exp-years">Feb. 2023&ndash;Jun. 2024</div>
+            </div>
+            <div class="exp-note">Advisor: Prof. Hui-Huang Chen</div>
+            <ul class="exp-list">
+              <li>Investigated symmetry breaking and entanglement-related quantities in conformal field theories.</li>
+              <li>Implemented numerical tests of CFT predictions using exactly solvable lattice models.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -541,6 +657,41 @@
             </div>
           </div>
         </article>
+
+        <div class="theme">Physics education and visualization</div>
+        <article class="pub-card">
+          <div class="thumb placeholder">
+            College Physics<br />theoretical study and visualization
+          </div>
+          <div>
+            <p class="pub-title"><a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a></p>
+            <p class="authors"><strong>Miao Chen</strong> and Qin Guo</p>
+            <p class="venue"><em>College Physics</em> 43(4), 65&ndash;68, 80 (2024). [in Chinese]</p>
+            <p class="highlight">A theoretical and visualized treatment of the winding problem for physics education.</p>
+            <div class="tag-row">
+              <span class="tag">Physics education</span><span class="tag">Visualization</span>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching Experience</h2>
+        <ul class="teaching-list">
+          <li>Teaching Assistant, University Physics at BNU, 2025.</li>
+          <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
+        </ul>
+      </section>
+
+      <section id="conferences">
+        <h2>Conferences</h2>
+        <ul class="conference-list">
+          <li>
+            <span class="conf-title">International Conference on Statistical Physics (29th)</span>, Florence, Italy.<br />
+            <span class="conf-meta">Poster: <em>Coercivity Panorama of Dynamic Hysteresis</em>. Jul. 13&ndash;18, 2025.</span>
+          </li>
+        </ul>
       </section>
 
       <section id="cv">
@@ -555,7 +706,7 @@
         <p>
           School of Physics and Astronomy, Beijing Normal University<br />
           Beijing, China<br />
-          Email: <a href="mailto:miaochen@bnu.edu.cn">miaochen@bnu.edu.cn</a>
+          Email: <a href="mailto:miaochen@mail.bnu.edu.cn">miaochen@mail.bnu.edu.cn</a>
         </p>
       </section>
     </main>
