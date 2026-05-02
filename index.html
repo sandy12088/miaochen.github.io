@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miao Chen | Academic Homepage</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.ico">
   <meta name="description" content="Academic homepage of Miao Chen, graduate student in physics working on non-equilibrium statistical physics, dynamic hysteresis, and information thermodynamics." />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
   <style>
     :root {
       --text: #222;
@@ -281,6 +282,16 @@
       position: relative;
     }
 
+    .news::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 18px;
+      bottom: 18px;
+      width: 1px;
+      background: var(--line);
+    }
+
     .news li {
       position: relative;
       display: grid;
@@ -372,32 +383,8 @@
       display: block;
     }
 
-    .thumb object,
-    .thumb iframe {
-      width: 100%;
-      min-height: 128px;
-      aspect-ratio: 4 / 3;
-      border: 0;
-      border-radius: 12px;
-      display: block;
-      background: #fff;
-    }
-
     .thumb.contain {
       padding: 0;
-    }
-
-    .thumb.placeholder {
-      min-height: 120px;
-      display: grid;
-      place-items: center;
-      padding: 14px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.86rem;
-      background:
-        linear-gradient(135deg, rgba(155,28,28,0.08), rgba(31,95,153,0.08)),
-        repeating-linear-gradient(45deg, #ffffff 0, #ffffff 7px, #f1f3f5 7px, #f1f3f5 14px);
     }
 
     .pub-title {
@@ -423,6 +410,12 @@
       margin: 2px 0;
     }
 
+    .corr {
+      color: #111;
+      font-weight: 400;
+      font-size: 0.9em;
+    }
+
     .highlight {
       margin-top: 8px;
       color: #333;
@@ -437,30 +430,28 @@
     }
 
     .pub-links {
-      display: flex;
-      gap: 8px;
+      display: inline-flex;
       flex-wrap: wrap;
-      margin-top: 10px;
-      font-size: 0.92rem;
+      gap: 8px;
+      margin-left: 10px;
+      vertical-align: middle;
     }
 
     .mini-button {
       display: inline-block;
-      padding: 3px 10px;
+      padding: 2px 9px;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: #fff;
       color: var(--link);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       line-height: 1.5;
-      white-space: nowrap;
     }
 
     .mini-button:hover {
       background: var(--light);
       text-decoration: none;
-      border-color: rgba(31, 95, 153, 0.28);
     }
 
     .tag-row {
@@ -516,15 +507,6 @@
       color: #111;
       border-bottom: 1px solid var(--line);
       padding-bottom: 6px;
-    }
-
-    .cv-compact {
-      margin: 0;
-      padding-left: 1.2rem;
-    }
-
-    .cv-compact li {
-      margin: 7px 0;
     }
 
     .cv-publications {
@@ -676,7 +658,7 @@
     <main>
       <section id="about">
         <p class="lead">
-          Hello! I am Miao Chen, a graduate student in physics at Beijing Normal University. I am pursuing an M.Sc. in Theoretical Physics at BNU under the supervision of <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a>, following my B.Sc. in Physics from Jiangxi Normal University in 2024. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
+          Hello! I am Miao Chen, an M.Sc. student in Theoretical Physics at Beijing Normal University under the supervision of <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a>. I received my B.Sc. in Physics from Jiangxi Normal University in 2024. My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, finite-time and finite-size scaling, and information thermodynamics.
         </p>
         <p>
           I am interested in how driven many-body systems respond across different time and length scales, and how universal constraints emerge from microscopic dynamics.
@@ -695,14 +677,15 @@
       <section id="news">
         <h2>News</h2>
         <ul class="news">
-          <li><span class="date">2026.04</span><span>Our <a href="#pub-information-machine">preprint on finite-time thermodynamics of an autonomous information machine</a> is available on arXiv.</span></li>
-          <li><span class="date">2026.03</span><span>Our two companion papers on dynamic hysteresis and coercivity landscapes were published back-to-back in <a href="#pub-coercivity-landscape"><strong class="journal-highlight">Physical Review Letters</strong></a> and <a href="#pub-coercivity-scaling"><em>Physical Review E</em></a>. The PRL paper was selected as an <span class="news-highlight">Editors’ Suggestion</span>.</span></li>
-          <li><span class="date">2024.03</span><span>Our paper on <a href="#pub-entanglement">Rényi entanglement asymmetry in conformal field theories</a> appeared in <em>Physical Review D</em>.</span></li>
+          <li><span class="date">2026.04</span><span>Our <a href="#pub-information-machine">information-thermodynamics preprint</a> is available on arXiv.</span></li>
+          <li><span class="date">2026.03</span><span>Our two companion papers on dynamic hysteresis and coercivity landscapes were published back-to-back in <a href="#pub-coercivity-landscape"><strong class="journal-highlight">Phys. Rev. Lett.</strong></a> and <a href="#pub-coercivity-scaling"><em>Phys. Rev. E</em></a>. The <em>Phys. Rev. Lett.</em> paper was selected as an <span class="news-highlight">Editors’ Suggestion</span>.</span></li>
+          <li><span class="date">2024.03</span><span>Our <a href="#pub-entanglement">entanglement-asymmetry paper</a> appeared in <em>Phys. Rev. D</em>.</span></li>
         </ul>
       </section>
 
       <section id="publications">
         <h2>Selected Publications</h2>
+        <p class="edu-note">* denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
 
         <div class="theme">Dynamic hysteresis and coercivity landscapes</div>
         <article class="pub-card" id="pub-coercivity-landscape">
@@ -711,15 +694,13 @@
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a></p>
-            <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma</p>
-            <p class="venue"><strong class="journal-highlight">Physical Review Letters</strong> 136, 117102 (2026). Editors’ Suggestion.</p>
+            <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma<span class="corr">&#8224;</span></p>
+            <p class="venue"><strong class="journal-highlight">Physical Review Letters</strong> 136, 117102 (2026).
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/5rg8-52gl.pdf" target="_blank" rel="noopener">PDF</a><a class="mini-button" href="https://miaochen.org/images/Poster_QML.pdf" target="_blank" rel="noopener">Poster</a></span>
+            </p>
             <p class="highlight">A unified landscape picture for dynamic hysteresis across slow-to-fast driving regimes.</p>
-            <div class="pub-links">
-              <a class="mini-button" href="images/5rg8-52gl.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="mini-button" href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
-              <span class="tag">Dynamic hysteresis</span><span class="tag">Coercivity landscape</span>
+              <span class="tag">Editors’ Suggestion</span><span class="tag">Dynamic hysteresis</span><span class="tag">Coercivity landscape</span>
             </div>
           </div>
         </article>
@@ -730,13 +711,11 @@
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a></p>
-            <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma</p>
-            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026).</p>
+            <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao<span class="corr">&#8224;</span>, and Yu-Han Ma<span class="corr">&#8224;</span></p>
+            <p class="venue"><em>Physical Review E</em> 113, 034124 (2026).
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/mzvj-n6vn.pdf" target="_blank" rel="noopener">PDF</a></span>
+            </p>
             <p class="highlight">Finite-time and finite-size effects jointly shape coercivity scaling and plateau behavior.</p>
-            <div class="pub-links">
-              <a class="mini-button" href="images/mzvj-n6vn.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="mini-button" href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
               <span class="tag">Scaling</span><span class="tag">Finite-time effects</span><span class="tag">Finite-size effects</span>
             </div>
@@ -745,18 +724,16 @@
 
         <div class="theme">Information thermodynamics</div>
         <article class="pub-card" id="pub-information-machine">
-          <a class="thumb contain" href="images/2604.15953v1%20%281%29.pdf" target="_blank" rel="noopener" aria-label="Open PDF for finite-time thermodynamics of an autonomous information machine">
+          <a class="thumb contain" href="images/2604.15953v1%20(1).pdf" target="_blank" rel="noopener" aria-label="Open PDF for finite-time thermodynamics of an autonomous information machine">
             <img src="images/demon.png" alt="Autonomous information machine figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a></p>
-            <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma</p>
-            <p class="venue">arXiv:2604.15953 (2026).</p>
+            <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma<span class="corr">&#8224;</span></p>
+            <p class="venue">arXiv:2604.15953 (2026).
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/2604.15953v1%20(1).pdf" target="_blank" rel="noopener">PDF</a></span>
+            </p>
             <p class="highlight">Finite-time performance and thermodynamic trade-offs in an autonomous information machine.</p>
-            <div class="pub-links">
-              <a class="mini-button" href="images/2604.15953v1%20%281%29.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="mini-button" href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
               <span class="tag">Information engine</span><span class="tag">Finite-time thermodynamics</span><span class="tag">Autonomous machine</span>
             </div>
@@ -765,24 +742,21 @@
 
         <div class="theme">Quantum many-body theory</div>
         <article class="pub-card" id="pub-entanglement">
-          <a class="thumb contain" href="images/PhysRevD.109.065009%20%281%29.pdf" target="_blank" rel="noopener" aria-label="Open PDF for Rényi entanglement asymmetry">
+          <a class="thumb contain" href="images/PhysRevD.109.065009%20(1).pdf" target="_blank" rel="noopener" aria-label="Open PDF for Rényi entanglement asymmetry">
             <img src="images/entangle.png" alt="Entanglement asymmetry figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a></p>
-            <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen</p>
-            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024).</p>
+            <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen<span class="corr">&#8224;</span></p>
+            <p class="venue"><em>Physical Review D</em> 109, 065009 (2024).
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/PhysRevD.109.065009%20(1).pdf" target="_blank" rel="noopener">PDF</a></span>
+            </p>
             <p class="highlight">Entanglement asymmetry as a diagnostic of symmetry breaking in conformal field theories.</p>
-            <div class="pub-links">
-              <a class="mini-button" href="images/PhysRevD.109.065009%20%281%29.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="mini-button" href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a>
-            </div>
             <div class="tag-row">
               <span class="tag">CFT</span><span class="tag">Entanglement</span><span class="tag">Symmetry breaking</span>
             </div>
           </div>
         </article>
-
       </section>
 
       <section id="cv">
@@ -822,7 +796,7 @@
                 <div>
                   <div class="edu-degree">B.Sc. in Physics</div>
                   <div class="edu-school">Jiangxi Normal University, Nanchang, China</div>
-                  <div class="edu-note">GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
+                  <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
                 </div>
               </div>
             </div>
@@ -831,13 +805,13 @@
           <div class="cv-block" id="cv-publications">
             <h3>Publications</h3>
             <ol class="cv-publications">
-              <li><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma, “<a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a>,” <strong class="journal-highlight">Physical Review Letters</strong> <strong>136</strong>, 117102 (2026). <span class="news-highlight">Editors’ Suggestion</span>.</li>
-              <li><strong>Miao Chen</strong>, Xiu-Hua Zhao, and Yu-Han Ma, “<a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a>,” <em>Physical Review E</em> <strong>113</strong>, 034124 (2026).</li>
-              <li>Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma, “<a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a>,” <em>arXiv:2604.15953</em> (2026).</li>
-              <li><strong>Miao Chen</strong> and Hui-Huang Chen, “<a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a>,” <em>Physical Review D</em> <strong>109</strong>, 065009 (2024).</li>
+              <li><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a>,” <strong class="journal-highlight">Physical Review Letters</strong> <strong>136</strong>, 117102 (2026). <span class="news-highlight">Editors’ Suggestion</span>.</li>
+              <li><strong>Miao Chen</strong>, Xiu-Hua Zhao<span class="corr">&#8224;</span>, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a>,” <em>Physical Review E</em> <strong>113</strong>, 034124 (2026).</li>
+              <li>Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a>,” <em>arXiv:2604.15953</em> (2026).</li>
+              <li><strong>Miao Chen</strong> and Hui-Huang Chen<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a>,” <em>Physical Review D</em> <strong>109</strong>, 065009 (2024).</li>
               <li><strong>Miao Chen</strong> and Qin Guo, “<a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a>,” <em>College Physics</em> <strong>43</strong>(4), 65&ndash;68, 80 (2024). [in Chinese]</li>
             </ol>
-            <p class="edu-note">* denotes equal contribution.</p>
+            <p class="edu-note">* denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
           </div>
 
           <div class="cv-block" id="cv-research">
@@ -873,7 +847,7 @@
           <div class="cv-block" id="cv-teaching">
             <h3>Teaching Experience</h3>
             <ul class="teaching-list">
-              <li>Teaching Assistant, University Physics at BNU, 2025.</li>
+              <li>Teaching Assistant, College Physics at BNU, 2025.</li>
               <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
             </ul>
           </div>
