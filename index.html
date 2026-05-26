@@ -456,35 +456,35 @@
       content: "";
       position: absolute;
       left: 13px;
-      top: 18px;
-      bottom: 18px;
+      top: 16px;
+      bottom: 16px;
       width: 1px;
-      background: var(--line);
+      background: rgba(231, 225, 223, 0.62);
     }
 
     .news li {
       position: relative;
       display: grid;
       grid-template-columns: 86px minmax(0, 1fr);
-      gap: 14px;
+      gap: 12px;
       margin-left: 26px;
-      padding: 13px 16px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: 0 8px 18px rgba(50, 35, 30, 0.035);
+      padding: 11px 14px;
+      border: 1px solid rgba(231, 225, 223, 0.58);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.66);
+      box-shadow: 0 5px 14px rgba(50, 35, 30, 0.018);
     }
 
     .news li::before {
       content: "";
       position: absolute;
-      left: -17px;
-      top: 19px;
-      width: 9px;
-      height: 9px;
+      left: -16px;
+      top: 18px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 4px var(--accent-soft);
+      box-shadow: 0 0 0 3px rgba(230, 244, 241, 0.78);
     }
 
     .date {
@@ -777,8 +777,25 @@
       margin: 0 auto;
       padding: 24px;
       color: var(--muted);
-      border-top: 1px solid var(--line);
+      border-top: 1px solid rgba(231, 225, 223, 0.74);
       font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .footer-back-top {
+      color: #7a8795;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      transition: color 0.16s ease, transform 0.16s ease;
+    }
+
+    .footer-back-top:hover {
+      color: var(--accent);
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
     @media (max-width: 880px) {
@@ -860,21 +877,29 @@
       }
 
       .nav {
-        padding: 14px 18px;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 16px 9px;
       }
 
       .brand {
-        font-size: 1.42rem;
+        font-size: 1.32rem;
+        line-height: 1.05;
+        text-align: center;
         white-space: normal;
       }
 
       .navlinks {
-        gap: 8px;
-        font-size: 1.34rem;
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+        font-size: 1.22rem;
+        line-height: 1.05;
       }
 
       .navlinks a {
-        padding: 4px 9px;
+        padding: 2px 7px;
       }
 
       .layout {
@@ -996,6 +1021,20 @@
       .cv-mini-nav a {
         font-size: 0.86rem;
         padding: 3px 9px;
+      }
+    }
+
+
+    @media (max-width: 560px) {
+      .footer {
+        padding: 20px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .footer-back-top {
+        font-size: 0.86rem;
       }
     }
 
@@ -1233,7 +1272,8 @@
   </div>
 
   <footer class="footer">
-    © 2026 Miao Chen. Last updated: May 2026.
+    <span>© 2026 Miao Chen. Last updated: May 2026.</span>
+    <a class="footer-back-top" href="#top">Back to top ↑</a>
   </footer>
   <script>
     (function () {
