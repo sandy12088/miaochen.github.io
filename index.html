@@ -36,10 +36,10 @@
       line-height: 1.65;
       min-height: 100vh;
       background:
-        radial-gradient(900px 520px at 6% 4%, rgba(15, 118, 110, 0.14), transparent 58%),
-        radial-gradient(760px 500px at 96% 12%, rgba(31, 95, 153, 0.10), transparent 56%),
-        radial-gradient(780px 520px at 48% 100%, rgba(15, 118, 110, 0.08), transparent 60%),
-        linear-gradient(180deg, #ffffff 0%, #f7f8fa 44%, #eef2f4 100%);
+        radial-gradient(900px 520px at 6% 4%, rgba(15, 118, 110, 0.075), transparent 60%),
+        radial-gradient(760px 500px at 96% 12%, rgba(31, 95, 153, 0.055), transparent 58%),
+        radial-gradient(780px 520px at 48% 100%, rgba(15, 118, 110, 0.04), transparent 62%),
+        linear-gradient(180deg, #ffffff 0%, #fafbfc 48%, #f4f7f8 100%);
     }
 
     body::before {
@@ -49,11 +49,11 @@
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(circle at 18% 28%, rgba(15, 118, 110, 0.08), transparent 24%),
-        radial-gradient(circle at 82% 42%, rgba(31, 95, 153, 0.07), transparent 26%),
-        radial-gradient(circle at 42% 78%, rgba(15, 118, 110, 0.06), transparent 30%);
-      filter: blur(44px);
-      opacity: 0.9;
+        radial-gradient(circle at 18% 28%, rgba(15, 118, 110, 0.04), transparent 26%),
+        radial-gradient(circle at 82% 42%, rgba(31, 95, 153, 0.035), transparent 28%),
+        radial-gradient(circle at 42% 78%, rgba(15, 118, 110, 0.03), transparent 32%);
+      filter: blur(48px);
+      opacity: 0.65;
     }
 
     .topbar, .layout, .footer {
@@ -163,9 +163,29 @@
       border-radius: 20px;
       border: 1px solid rgba(15, 118, 110, 0.18);
       object-fit: cover;
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.15);
       margin: 0 auto 16px;
       display: block;
+      animation: portraitFloat 5.2s ease-in-out infinite;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .portrait:hover {
+      animation-play-state: paused;
+      transform: translateY(-8px) rotate(-0.4deg);
+      box-shadow: 0 20px 36px rgba(15, 23, 42, 0.18);
+      border-color: rgba(15, 118, 110, 0.34);
+    }
+
+    @keyframes portraitFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .portrait {
+        animation: none;
+      }
     }
 
     .profile h1 {
