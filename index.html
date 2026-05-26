@@ -135,8 +135,8 @@
       margin: 0 auto;
       padding: 42px 24px 60px;
       display: grid;
-      grid-template-columns: 270px minmax(0, 1fr);
-      gap: 50px;
+      grid-template-columns: 290px minmax(0, 1fr);
+      gap: 52px;
     }
 
     aside {
@@ -147,24 +147,24 @@
 
     .profile {
       margin-left: -30px;
-      padding: 18px 14px;
-      border: 1px solid rgba(231, 225, 223, 0.92);
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.66));
-      box-shadow: 0 18px 40px rgba(45, 55, 72, 0.10);
-      backdrop-filter: blur(14px);
+      padding: 6px 4px;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
       text-align: center;
     }
 
     .portrait {
       width: 100%;
-      max-width: 145px;
-      height: 160px;
-      border-radius: 18px;
+      max-width: 165px;
+      height: 182px;
+      border-radius: 20px;
       border: 1px solid rgba(15, 118, 110, 0.18);
       object-fit: cover;
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
-      margin: 0 auto 14px;
+      margin: 0 auto 16px;
       display: block;
     }
 
@@ -183,14 +183,15 @@
     .profile-list {
       list-style: none;
       padding: 0;
-      margin: 18px 0 0;
+      margin: 18px auto 0;
       color: var(--muted);
       font-size: 0.95rem;
+      display: inline-block;
+      text-align: left;
     }
 
     .profile-list li {
       margin: 8px 0;
-      text-align: center;
     }
 
     .keyword-box {
@@ -769,8 +770,8 @@
       }
 
       .portrait {
-        width: 112px;
-        height: 128px;
+        width: 132px;
+        height: 150px;
         margin-bottom: 0;
       }
 
@@ -803,13 +804,12 @@
       .profile {
         margin-left: 0;
         grid-template-columns: 1fr;
-        text-align: center;
       }
 
       .portrait {
-        width: 118px;
-        height: 134px;
-        margin: 0 auto;
+        width: 138px;
+        height: 156px;
+        margin: 0;
       }
 
       .news li {
