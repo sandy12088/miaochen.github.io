@@ -514,7 +514,7 @@
     }
 
     .theme::before {
-      content: "▶";
+      content: "✦";
       color: #111;
       margin-right: 8px;
       font-size: 0.88rem;
@@ -606,10 +606,15 @@
     }
 
     .highlight::before {
-      content: "■";
-      color: var(--accent);
-      margin-right: 7px;
-      font-size: 0.75rem;
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 8px;
+      vertical-align: 1px;
+      opacity: 0.82;
     }
 
     .pub-links {
