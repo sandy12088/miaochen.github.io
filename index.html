@@ -36,10 +36,10 @@
       line-height: 1.65;
       min-height: 100vh;
       background:
-        radial-gradient(900px 520px at 6% 4%, rgba(15, 118, 110, 0.075), transparent 60%),
-        radial-gradient(760px 500px at 96% 12%, rgba(31, 95, 153, 0.055), transparent 58%),
-        radial-gradient(780px 520px at 48% 100%, rgba(15, 118, 110, 0.04), transparent 62%),
-        linear-gradient(180deg, #ffffff 0%, #fafbfc 48%, #f4f7f8 100%);
+        radial-gradient(900px 520px at 6% 4%, rgba(15, 118, 110, 0.040), transparent 64%),
+        radial-gradient(760px 500px at 96% 12%, rgba(31, 95, 153, 0.028), transparent 62%),
+        radial-gradient(780px 520px at 48% 100%, rgba(15, 118, 110, 0.020), transparent 66%),
+        linear-gradient(180deg, #ffffff 0%, #fcfdfe 52%, #f8fafb 100%);
     }
 
     body::before {
@@ -49,11 +49,11 @@
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(circle at 18% 28%, rgba(15, 118, 110, 0.04), transparent 26%),
-        radial-gradient(circle at 82% 42%, rgba(31, 95, 153, 0.035), transparent 28%),
-        radial-gradient(circle at 42% 78%, rgba(15, 118, 110, 0.03), transparent 32%);
-      filter: blur(48px);
-      opacity: 0.65;
+        radial-gradient(circle at 18% 28%, rgba(15, 118, 110, 0.018), transparent 30%),
+        radial-gradient(circle at 82% 42%, rgba(31, 95, 153, 0.016), transparent 32%),
+        radial-gradient(circle at 42% 78%, rgba(15, 118, 110, 0.014), transparent 36%);
+      filter: blur(54px);
+      opacity: 0.38;
     }
 
     .topbar, .layout, .footer {
@@ -230,6 +230,11 @@
       color: var(--accent);
       font-size: 0.78rem;
       font-weight: 600;
+    }
+
+    #about .keyword-box {
+      justify-content: flex-start;
+      margin-top: 14px;
     }
 
     main {
@@ -867,11 +872,7 @@
           <li>🎓 <a href="https://scholar.google.com/citations?user=HqSndnwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
           <li>🔗 <a href="https://www.researchgate.net/profile/Chen-Miao-17" target="_blank" rel="noopener">ResearchGate</a></li>
         </ul>
-        <div class="keyword-box" aria-label="Research keywords">
-          <span>Non-equilibrium statistical physics</span>
-          <span>Phase transition</span>
-          <span>Information thermodynamics</span>
-        </div>
+
       </div>
     </aside>
 
@@ -883,6 +884,11 @@
         <p class="research-focus">
           My research focuses on non-equilibrium statistical physics, especially dynamic hysteresis, phase transitions, and information thermodynamics. I aim to understand how driven many-body systems respond across time and length scales, and how universal constraints emerge from microscopic dynamics.
         </p>
+        <div class="keyword-box" aria-label="Research keywords">
+          <span>Non-equilibrium statistical physics</span>
+          <span>Phase transition</span>
+          <span>Information thermodynamics</span>
+        </div>
       </section>
 
       <section id="news">
