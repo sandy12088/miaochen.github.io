@@ -9,17 +9,14 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
   <style>
     :root {
       --text: #222;
       --muted: #666;
       --light: #f7f5f4;
       --line: #e7e1df;
-      --accent: #0f766e;
-      --accent-soft: #e6f4f1;
+      --accent: #9b1c1c;
+      --accent-soft: #f8eaea;
       --link: #1f5f99;
       --card: #fffdfc;
       --max-width: 1120px;
@@ -34,39 +31,9 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       line-height: 1.65;
-      min-height: 100vh;
       background:
-        radial-gradient(900px 520px at 6% 4%, rgba(15, 118, 110, 0.040), transparent 64%),
-        radial-gradient(760px 500px at 96% 12%, rgba(31, 95, 153, 0.028), transparent 62%),
-        radial-gradient(780px 520px at 48% 100%, rgba(15, 118, 110, 0.020), transparent 66%),
-        linear-gradient(180deg, #ffffff 0%, #fcfdfe 52%, #f8fafb 100%);
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(circle at 18% 28%, rgba(15, 118, 110, 0.018), transparent 30%),
-        radial-gradient(circle at 82% 42%, rgba(31, 95, 153, 0.016), transparent 32%),
-        radial-gradient(circle at 42% 78%, rgba(15, 118, 110, 0.014), transparent 36%);
-      filter: blur(54px);
-      opacity: 0.38;
-    }
-
-    .topbar, .layout, .footer {
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (min-width: 1180px) {
-      .nav,
-      .layout,
-      .footer {
-        transform: translateX(-34px);
-      }
+        radial-gradient(circle at 0 0, rgba(155, 28, 28, 0.055), transparent 34%),
+        linear-gradient(180deg, #fff 0%, #fffaf8 100%);
     }
 
     a {
@@ -77,9 +44,9 @@
     a:hover { text-decoration: underline; }
 
     .topbar {
-      border-bottom: 1px solid rgba(231, 225, 223, 0.82);
-      background: rgba(255, 255, 255, 0.76);
-      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(231, 225, 223, 0.9);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -96,38 +63,31 @@
     }
 
     .brand {
-      font-family: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Kaiti SC", "STKaiti", "KaiTi", cursive;
-      font-weight: 500;
-      font-size: 1.56rem;
-      color: #425466;
-      letter-spacing: 0.35px;
+      font-family: "Marker Felt", "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+      font-weight: 700;
+      font-size: 1.24rem;
+      color: #111;
+      letter-spacing: 0.2px;
       white-space: nowrap;
-      line-height: 1.1;
     }
 
     .navlinks {
-      font-family: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Kaiti SC", "STKaiti", "KaiTi", cursive;
       display: flex;
-      gap: 10px;
-      font-size: 1.46rem;
-      font-weight: 500;
-      letter-spacing: 0.38px;
+      gap: 22px;
+      font-family: "Marker Felt", "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive;
+      font-size: 1.22rem;
+      font-weight: 600;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     .navlinks a {
-      color: #526174;
-      padding: 5px 11px;
-      border-radius: 999px;
-      transition: color 0.16s ease, background 0.16s ease, transform 0.16s ease;
+      color: #333;
     }
 
     .navlinks a:hover {
       color: var(--accent);
-      background: rgba(15, 118, 110, 0.08);
       text-decoration: none;
-      transform: translateY(-1px);
     }
 
     .layout {
@@ -143,49 +103,26 @@
       align-self: start;
       position: sticky;
       top: 86px;
+      transform: translateX(-18px);
     }
 
     .profile {
-      margin-left: -30px;
-      padding: 6px 4px;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
-      backdrop-filter: none;
-      text-align: center;
+      padding: 22px 20px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,250,248,0.96));
+      box-shadow: 0 16px 34px rgba(50, 35, 30, 0.08);
     }
 
     .portrait {
       width: 100%;
-      max-width: 165px;
-      height: 182px;
-      border-radius: 20px;
-      border: 1px solid rgba(15, 118, 110, 0.18);
+      max-width: 160px;
+      height: 176px;
+      border-radius: 24px;
       object-fit: cover;
-      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.15);
-      margin: 0 auto 16px;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+      margin: 0 auto 20px;
       display: block;
-      animation: portraitFloat 5.2s ease-in-out infinite;
-      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
-    }
-
-    .portrait:hover {
-      animation-play-state: paused;
-      transform: translateY(-8px) rotate(-0.4deg);
-      box-shadow: 0 20px 36px rgba(15, 23, 42, 0.18);
-      border-color: rgba(15, 118, 110, 0.34);
-    }
-
-    @keyframes portraitFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-7px); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .portrait {
-        animation: none;
-      }
     }
 
     .profile h1 {
@@ -196,18 +133,16 @@
 
     .profile .role {
       color: var(--muted);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       line-height: 1.45;
     }
 
     .profile-list {
       list-style: none;
       padding: 0;
-      margin: 18px auto 0;
+      margin: 16px 0 0;
       color: var(--muted);
       font-size: 0.95rem;
-      display: inline-block;
-      text-align: left;
     }
 
     .profile-list li {
@@ -219,7 +154,6 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 18px;
-      justify-content: center;
     }
 
     .keyword-box span {
@@ -232,11 +166,6 @@
       font-weight: 600;
     }
 
-    #about .keyword-box {
-      justify-content: flex-start;
-      margin-top: 14px;
-    }
-
     main {
       max-width: 780px;
     }
@@ -244,20 +173,6 @@
     section {
       margin-bottom: 44px;
       scroll-margin-top: 90px;
-    }
-
-    #cv {
-      display: none;
-    }
-
-    body.show-cv #cv {
-      display: block;
-      animation: cvReveal 0.22s ease-out;
-    }
-
-    @keyframes cvReveal {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     h2 {
@@ -275,7 +190,7 @@
       width: 42px;
       height: 4px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), rgba(31, 95, 153, 0.65));
+      background: var(--accent);
       margin-bottom: 9px;
     }
 
@@ -287,28 +202,28 @@
     .lead {
       font-size: 1.04rem;
       color: #333;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
-    .research-focus {
+    .research-statement {
       font-size: 1.12rem;
-      color: #222;
-      line-height: 1.7;
-      margin-top: 10px;
+      color: #333;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
-    #about .lead,
-    #about .research-focus {
+    .intro-card p {
       text-align: justify;
       text-justify: inter-word;
     }
 
     .intro-card {
       padding: 22px 24px;
-      border: 1px solid rgba(231, 225, 223, 0.92);
+      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.68);
-      box-shadow: 0 12px 30px rgba(45, 55, 72, 0.055);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 10px 28px rgba(50, 35, 30, 0.045);
     }
 
     .question-list {
@@ -448,48 +363,41 @@
       padding: 0;
       margin: 0;
       position: relative;
-      display: grid;
-      gap: 12px;
     }
 
     .news::before {
       content: "";
       position: absolute;
-      left: 13px;
-      top: 16px;
-      bottom: 16px;
+      left: 5px;
+      top: 18px;
+      bottom: 18px;
       width: 1px;
-      background: rgba(231, 225, 223, 0.62);
+      background: var(--line);
     }
 
     .news li {
       position: relative;
       display: grid;
-      grid-template-columns: 86px minmax(0, 1fr);
-      gap: 12px;
-      margin-left: 26px;
-      padding: 11px 14px;
-      border: 1px solid rgba(231, 225, 223, 0.58);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.66);
-      box-shadow: 0 5px 14px rgba(50, 35, 30, 0.018);
+      grid-template-columns: 98px minmax(0, 1fr);
+      gap: 14px;
+      padding: 10px 0 10px 22px;
+      border-bottom: 1px dashed var(--line);
     }
 
     .news li::before {
       content: "";
       position: absolute;
-      left: -16px;
-      top: 18px;
-      width: 8px;
-      height: 8px;
+      left: 2px;
+      top: 1.35em;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 3px rgba(230, 244, 241, 0.78);
+      box-shadow: 0 0 0 4px var(--accent-soft);
     }
 
     .date {
-      color: var(--accent);
-      font-weight: 700;
+      color: var(--muted);
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
     }
@@ -506,15 +414,14 @@
     }
 
     .theme {
-      margin: 30px 0 16px;
+      margin: 28px 0 14px;
       font-weight: 700;
-      font-size: 1.12rem;
-      letter-spacing: 0.25px;
+      letter-spacing: 0.2px;
       color: #111;
     }
 
     .theme::before {
-      content: "✦";
+      content: "▶";
       color: #111;
       margin-right: 8px;
       font-size: 0.88rem;
@@ -529,9 +436,8 @@
       border: 1px solid var(--line);
       border-radius: 20px;
       margin-bottom: 18px;
-      background: rgba(255, 255, 255, 0.72);
-      box-shadow: 0 12px 28px rgba(45, 55, 72, 0.055);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 10px 24px rgba(50, 35, 30, 0.04);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
       scroll-margin-top: 90px;
     }
@@ -539,7 +445,7 @@
     .pub-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 16px 30px rgba(50, 35, 30, 0.08);
-      border-color: rgba(15, 118, 110, 0.18);
+      border-color: rgba(155, 28, 28, 0.18);
     }
 
     .thumb {
@@ -606,15 +512,10 @@
     }
 
     .highlight::before {
-      content: "";
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      margin-right: 8px;
-      vertical-align: 1px;
-      opacity: 0.82;
+      content: "■";
+      color: var(--accent);
+      margin-right: 7px;
+      font-size: 0.75rem;
     }
 
     .pub-links {
@@ -629,17 +530,16 @@
       display: inline-block;
       padding: 2px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(37, 99, 235, 0.20);
+      border: 1px solid var(--line);
       background: #fff;
-      color: #2f6fbd;
+      color: var(--link);
       font-size: 0.78rem;
       font-weight: 600;
       line-height: 1.5;
     }
 
     .mini-button:hover {
-      background: #f4f8ff;
-      border-color: rgba(37, 99, 235, 0.32);
+      background: var(--light);
       text-decoration: none;
     }
 
@@ -660,13 +560,20 @@
       font-weight: 600;
     }
 
+    .cv-section {
+      display: none;
+    }
+
+    .cv-section.cv-open {
+      display: block;
+    }
+
     .cv-panel {
       padding: 22px 24px;
-      border: 1px solid rgba(231, 225, 223, 0.92);
+      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.70);
-      box-shadow: 0 12px 30px rgba(45, 55, 72, 0.055);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 28px rgba(50, 35, 30, 0.04);
     }
 
     .cv-mini-nav {
@@ -690,28 +597,21 @@
     }
 
     .cv-full {
-      margin-top: 24px;
-      padding-top: 0;
-      display: grid;
-      gap: 16px;
+      margin-top: 26px;
+      padding-top: 8px;
     }
 
     .cv-block {
-      margin-top: 0;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-left: 4px solid rgba(15, 118, 110, 0.55);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.72);
+      margin-top: 28px;
       scroll-margin-top: 90px;
     }
 
     .cv-block h3 {
-      font-size: 1.08rem;
-      margin: 0 0 10px;
+      font-size: 1.18rem;
+      margin: 0 0 12px;
       color: #111;
-      border-bottom: none;
-      padding-bottom: 0;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
     }
 
     .cv-publications {
@@ -759,43 +659,13 @@
       text-decoration: none;
     }
 
-    .back-top {
-      display: inline-block;
-      margin-top: 18px;
-      color: #2f6fbd;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .back-top:hover {
-      text-decoration: none;
-      color: var(--accent);
-    }
-
     .footer {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 24px;
       color: var(--muted);
-      border-top: 1px solid rgba(231, 225, 223, 0.74);
+      border-top: 1px solid var(--line);
       font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .footer-back-top {
-      color: #7a8795;
-      font-size: 0.88rem;
-      white-space: nowrap;
-      transition: color 0.16s ease, transform 0.16s ease;
-    }
-
-    .footer-back-top:hover {
-      color: var(--accent);
-      text-decoration: none;
-      transform: translateY(-1px);
     }
 
     @media (max-width: 880px) {
@@ -807,6 +677,7 @@
 
       aside {
         position: static;
+        transform: none;
       }
 
       .profile {
@@ -817,8 +688,8 @@
       }
 
       .portrait {
-        width: 132px;
-        height: 150px;
+        width: 112px;
+        height: 128px;
         margin-bottom: 0;
       }
 
@@ -849,13 +720,12 @@
       }
 
       .profile {
-        margin-left: 0;
         grid-template-columns: 1fr;
       }
 
       .portrait {
-        width: 138px;
-        height: 156px;
+        width: 118px;
+        height: 134px;
         margin: 0;
       }
 
@@ -864,187 +734,14 @@
         gap: 0;
       }
     }
-
-
-    /* ---------- Mobile polish ---------- */
-    @media (max-width: 560px) {
-      body {
-        overflow-x: hidden;
-      }
-
-      .topbar {
-        overflow-x: hidden;
-      }
-
-      .nav {
-        align-items: center;
-        flex-direction: column;
-        gap: 4px;
-        padding: 10px 16px 9px;
-      }
-
-      .brand {
-        font-size: 1.32rem;
-        line-height: 1.05;
-        text-align: center;
-        white-space: normal;
-      }
-
-      .navlinks {
-        width: 100%;
-        justify-content: center;
-        gap: 6px;
-        font-size: 1.22rem;
-        line-height: 1.05;
-      }
-
-      .navlinks a {
-        padding: 2px 7px;
-      }
-
-      .layout {
-        padding: 30px 18px 54px;
-        gap: 30px;
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        max-width: 100%;
-        min-width: 0;
-      }
-
-      .profile {
-        margin-left: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-        gap: 10px;
-      }
-
-      .portrait {
-        width: 132px;
-        height: 150px;
-        margin: 0 auto 14px;
-      }
-
-      .profile-list {
-        margin: 16px auto 0;
-        text-align: left;
-      }
-
-      #about .lead,
-      #about .research-focus {
-        text-align: left;
-      }
-
-      #about .keyword-box {
-        justify-content: center;
-      }
-
-      .news li {
-        grid-template-columns: 1fr;
-        gap: 2px;
-        margin-left: 22px;
-        padding: 12px 13px;
-      }
-
-      .pub-card {
-        padding: 16px;
-        border-radius: 18px;
-      }
-
-      .pub-links {
-        display: flex;
-        margin-left: 0;
-        margin-top: 8px;
-      }
-
-      .cv-panel {
-        padding: 18px 14px;
-        border-radius: 18px;
-        overflow: hidden;
-      }
-
-      .cv-full {
-        gap: 14px;
-      }
-
-      .cv-block {
-        padding: 14px 13px;
-        border-radius: 15px;
-        overflow-wrap: anywhere;
-      }
-
-      .cv-full .education-list {
-        gap: 6px;
-      }
-
-      .cv-full .edu-item,
-      .edu-item {
-        grid-template-columns: 1fr !important;
-        gap: 6px;
-        padding: 12px 0;
-      }
-
-      .edu-years {
-        font-size: 0.95rem;
-        line-height: 1.35;
-        margin-bottom: 2px;
-      }
-
-      .edu-years .date-line {
-        display: inline;
-      }
-
-      .edu-years .date-line + .date-line::before {
-        content: "– ";
-        margin-left: 3px;
-      }
-
-      .edu-degree {
-        font-size: 1.04rem;
-        line-height: 1.35;
-      }
-
-      .edu-school,
-      .edu-note {
-        font-size: 0.92rem;
-        line-height: 1.5;
-        overflow-wrap: anywhere;
-      }
-
-      .cv-mini-nav {
-        gap: 8px;
-      }
-
-      .cv-mini-nav a {
-        font-size: 0.86rem;
-        padding: 3px 9px;
-      }
-    }
-
-
-    @media (max-width: 560px) {
-      .footer {
-        padding: 20px 18px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-      }
-
-      .footer-back-top {
-        font-size: 0.86rem;
-      }
-    }
-
   </style>
 </head>
 <body>
   <header class="topbar">
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top">Miao Chen 陈苗（泓樾）</a>
+      <a class="brand" href="#top">Miao Chen 陈苗 (泓樾）</a>
       <div class="navlinks">
+        <a href="#about">Me</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#cv">CV</a>
@@ -1067,23 +764,26 @@
           <li>🆔 <a href="https://orcid.org/0009-0009-4028-083X" target="_blank" rel="noopener">ORCID</a></li>
           <li>🎓 <a href="https://scholar.google.com/citations?user=HqSndnwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
           <li>🔗 <a href="https://www.researchgate.net/profile/Chen-Miao-17" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li>🧾 <a href="#cv">CV</a></li>
         </ul>
-
+        <div class="keyword-box" aria-label="Research keywords">
+          <span>Non-equilibrium statistical physics</span>
+          <span>Dynamic hysteresis</span>
+          <span>Information thermodynamics</span>
+        </div>
       </div>
     </aside>
 
     <main>
       <section id="about">
-        <p class="lead">
-          Hello! I am Miao Chen, an M.Sc. student in Theoretical Physics at Beijing Normal University under the supervision of <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a>. I received my B.Sc. in Physics from Jiangxi Normal University in 2024.
-        </p>
-        <p class="research-focus">
-          My research focuses on non-equilibrium statistical physics, especially dynamic hysteresis, phase transitions, and information thermodynamics. I aim to understand how driven many-body systems respond across time and length scales, and how universal constraints emerge from microscopic dynamics.
-        </p>
-        <div class="keyword-box" aria-label="Research keywords">
-          <span>Non-equilibrium statistical physics</span>
-          <span>Phase transition</span>
-          <span>Information thermodynamics</span>
+        <h2>Me</h2>
+        <div class="intro-card">
+          <p class="lead">
+            Hello! I am Miao Chen, an M.Sc. student in Theoretical Physics at Beijing Normal University under the supervision of <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a>. I received my B.Sc. in Physics from Jiangxi Normal University in 2024.
+          </p>
+          <p class="research-statement">
+            My research focuses on non-equilibrium statistical physics, with particular interests in dynamic hysteresis, phase transitions, and information thermodynamics, aiming to understand how driven many-body systems respond across different time and length scales and how universal constraints emerge from microscopic dynamics.
+          </p>
         </div>
       </section>
 
@@ -1097,19 +797,19 @@
       </section>
 
       <section id="publications">
-        <h2>Publications</h2>
-        <p class="edu-note">* denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
+        <h2>Selected Publications</h2>
+        <p class="edu-note">Representative works grouped by research direction. * denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
 
         <div class="theme">Dynamic hysteresis and coercivity landscapes</div>
         <article class="pub-card" id="pub-coercivity-landscape">
-          <a class="thumb contain" href="images/5rg8-52gl.pdf" target="_blank" rel="noopener" aria-label="Open PDF for Coercivity Landscape Characterizes Dynamic Hysteresis">
+          <a class="thumb contain" href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener" aria-label="Open DOI for Coercivity Landscape Characterizes Dynamic Hysteresis">
             <img src="images/coercivity_landscape.png" alt="Coercivity landscape figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a></p>
             <p class="authors"><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma<span class="corr">&#8224;</span></p>
             <p class="venue"><strong class="journal-highlight">Phys. Rev. Lett.</strong> 136, 117102 (2026).
-              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/5rg8-52gl.pdf" target="_blank" rel="noopener">PDF</a><a class="mini-button" href="https://miaochen.org/images/Poster_QML.pdf" target="_blank" rel="noopener">POSTER</a></span>
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="https://miaochen.org/images/Poster_QML.pdf" target="_blank" rel="noopener">POSTER</a></span>
             </p>
             <p class="highlight">A unified landscape picture for dynamic hysteresis across slow-to-fast driving regimes.</p>
             <div class="tag-row">
@@ -1119,14 +819,14 @@
         </article>
 
         <article class="pub-card" id="pub-coercivity-scaling">
-          <a class="thumb contain" href="images/mzvj-n6vn.pdf" target="_blank" rel="noopener" aria-label="Open PDF for finite-time and finite-size scalings of coercivity">
+          <a class="thumb contain" href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener" aria-label="Open DOI for finite-time and finite-size scalings of coercivity">
             <img src="images/phi4_coercivity.png" alt="Finite-time and finite-size coercivity scaling figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a></p>
             <p class="authors"><strong>Miao Chen</strong>, Xiu-Hua Zhao<span class="corr">&#8224;</span>, and Yu-Han Ma<span class="corr">&#8224;</span></p>
             <p class="venue"><em>Phys. Rev. E</em> 113, 034124 (2026).
-              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/mzvj-n6vn.pdf" target="_blank" rel="noopener">PDF</a></span>
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">DOI</a></span>
             </p>
             <p class="highlight">Finite-time and finite-size effects jointly shape coercivity scaling and plateau behavior.</p>
             <div class="tag-row">
@@ -1137,14 +837,14 @@
 
         <div class="theme">Information thermodynamics</div>
         <article class="pub-card" id="pub-information-machine">
-          <a class="thumb contain" href="images/2604.15953v1%20(1).pdf" target="_blank" rel="noopener" aria-label="Open PDF for finite-time thermodynamics of an autonomous information machine">
+          <a class="thumb contain" href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener" aria-label="Open arXiv DOI for finite-time thermodynamics of an autonomous information machine">
             <img src="images/demon.png" alt="Autonomous information machine figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a></p>
             <p class="authors">Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma<span class="corr">&#8224;</span></p>
             <p class="venue">arXiv:2604.15953 (2026).
-              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/2604.15953v1%20(1).pdf" target="_blank" rel="noopener">PDF</a></span>
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">DOI</a></span>
             </p>
             <p class="highlight">Finite-time performance and thermodynamic trade-offs in an autonomous information machine.</p>
             <div class="tag-row">
@@ -1155,14 +855,14 @@
 
         <div class="theme">Quantum many-body theory</div>
         <article class="pub-card" id="pub-entanglement">
-          <a class="thumb contain" href="images/PhysRevD.109.065009%20(1).pdf" target="_blank" rel="noopener" aria-label="Open PDF for Rényi entanglement asymmetry">
+          <a class="thumb contain" href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener" aria-label="Open DOI for Rényi entanglement asymmetry">
             <img src="images/entangle.png" alt="Entanglement asymmetry figure">
           </a>
           <div>
             <p class="pub-title"><a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a></p>
             <p class="authors"><strong>Miao Chen</strong> and Hui-Huang Chen<span class="corr">&#8224;</span></p>
             <p class="venue"><em>Phys. Rev. D</em> 109, 065009 (2024).
-              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a><a class="mini-button" href="images/PhysRevD.109.065009%20(1).pdf" target="_blank" rel="noopener">PDF</a></span>
+              <span class="pub-links"><a class="mini-button" href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">DOI</a></span>
             </p>
             <p class="highlight">Entanglement asymmetry as a diagnostic of symmetry breaking in conformal field theories.</p>
             <div class="tag-row">
@@ -1172,143 +872,125 @@
         </article>
       </section>
 
-      <section id="cv">
+      <section id="cv" class="cv-section">
         <h2>CV</h2>
         <div class="cv-panel">
-        <div class="cv-mini-nav" aria-label="CV section navigation">
-          <a href="#cv-education">Education</a>
-          <a href="#cv-publications">Publications</a>
-          <a href="#cv-research">Research Experience</a>
-          <a href="#cv-teaching">Teaching</a>
-        </div>
 
-        <div class="cv-full">
-          <div class="cv-block" id="cv-education">
-            <h3>Education</h3>
-            <div class="education-list">
-              <div class="edu-item">
-                <div class="edu-years"><span class="date-line">Sep. 2024</span><span class="date-line">present</span></div>
-                <div>
-                  <div class="edu-degree">M.Sc. in Theoretical Physics</div>
-                  <div class="edu-school">Beijing Normal University, Beijing, China</div>
-                  <div class="edu-note">Advisor: <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a> &middot; GPA: 3.8/4</div>
+          <div class="cv-mini-nav" aria-label="CV section navigation">
+            <a href="#cv-education">Education</a>
+            <a href="#cv-publications">Publications</a>
+            <a href="#cv-research">Research Experience</a>
+            <a href="#cv-teaching">Teaching</a>
+            <a href="#cv-conferences">Conferences</a>
+          </div>
+
+          <div class="cv-full">
+
+            <div class="cv-block" id="cv-education">
+              <h3>Education</h3>
+              <div class="education-list">
+                <div class="edu-item">
+                  <div class="edu-years"><span class="date-line">Sep. 2024</span><span class="date-line">present</span></div>
+                  <div>
+                    <div class="edu-degree">M.Sc. in Theoretical Physics</div>
+                    <div class="edu-school">Beijing Normal University, Beijing, China</div>
+                    <div class="edu-note">Advisor: <a href="https://yhmayyds.group/" target="_blank" rel="noopener">Prof. Yu-Han Ma</a> &middot; GPA: 3.8/4</div>
+                  </div>
                 </div>
-              </div>
-              <div class="edu-item">
-                <div class="edu-years"><span class="date-line">Sep. 2020</span><span class="date-line">Jun. 2024</span></div>
-                <div>
-                  <div class="edu-degree">B.Sc. in Physics</div>
-                  <div class="edu-school">Jiangxi Normal University, Nanchang, China</div>
-                  <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
+                <div class="edu-item">
+                  <div class="edu-years"><span class="date-line">Sep. 2020</span><span class="date-line">Jun. 2024</span></div>
+                  <div>
+                    <div class="edu-degree">B.Sc. in Physics</div>
+                    <div class="edu-school">Jiangxi Normal University, Nanchang, China</div>
+                    <div class="edu-note">Advisor: Prof. Hui-Huang Chen &middot; GPA: 90/100 &middot; Honor: Outstanding Graduate</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="cv-block" id="cv-publications">
-            <h3>Publications</h3>
-            <ol class="cv-publications">
-              <li><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a>,” <strong class="journal-highlight">Phys. Rev. Lett.</strong> <strong>136</strong>, 117102 (2026). <span class="news-highlight">Editors’ Suggestion</span>.</li>
-              <li><strong>Miao Chen</strong>, Xiu-Hua Zhao<span class="corr">&#8224;</span>, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a>,” <em>Phys. Rev. E</em> <strong>113</strong>, 034124 (2026).</li>
-              <li>Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a>,” <em>arXiv:2604.15953</em> (2026).</li>
-              <li><strong>Miao Chen</strong> and Hui-Huang Chen<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a>,” <em>Phys. Rev. D</em> <strong>109</strong>, 065009 (2024).</li>
-              <li><strong>Miao Chen</strong> and Qin Guo, “<a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a>,” <em>College Physics</em> <strong>43</strong>(4), 65&ndash;68, 80 (2024). [in Chinese]</li>
-            </ol>
-            <p class="edu-note">* denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
-          </div>
+            <div class="cv-block" id="cv-publications">
+              <h3>Publications</h3>
+              <ol class="cv-publications">
+                <li><strong>Miao Chen</strong>*, Xiu-Hua Zhao*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/5rg8-52gl" target="_blank" rel="noopener">Coercivity Landscape Characterizes Dynamic Hysteresis</a>,” <strong class="journal-highlight">Phys. Rev. Lett.</strong> <strong>136</strong>, 117102 (2026). <span class="news-highlight">Editors’ Suggestion</span>.</li>
+                <li><strong>Miao Chen</strong>, Xiu-Hua Zhao<span class="corr">&#8224;</span>, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/mzvj-n6vn" target="_blank" rel="noopener">Finite-time and finite-size scalings of coercivity in dynamic hysteresis</a>,” <em>Phys. Rev. E</em> <strong>113</strong>, 034124 (2026).</li>
+                <li>Wanyan Chen*, <strong>Miao Chen</strong>*, and Yu-Han Ma<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.48550/arXiv.2604.15953" target="_blank" rel="noopener">Finite-Time Thermodynamics of an Autonomous Information Machine</a>,” <em>arXiv:2604.15953</em> (2026).</li>
+                <li><strong>Miao Chen</strong> and Hui-Huang Chen<span class="corr">&#8224;</span>, “<a href="https://doi.org/10.1103/PhysRevD.109.065009" target="_blank" rel="noopener">Rényi entanglement asymmetry in (1+1)-dimensional conformal field theories</a>,” <em>Phys. Rev. D</em> <strong>109</strong>, 065009 (2024).</li>
+                <li><strong>Miao Chen</strong> and Qin Guo, “<a href="https://doi.org/10.16854/j.cnki.1000-0712.230114" target="_blank" rel="noopener">Theoretical Study and Visualization of the Winding Problem</a>,” <em>College Physics</em> <strong>43</strong>(4), 65&ndash;68, 80 (2024). [in Chinese]</li>
+              </ol>
+              <p class="edu-note">* denotes equal contribution; <span class="corr">&#8224;</span> corresponding author.</p>
+            </div>
 
-          <div class="cv-block" id="cv-research">
-            <h3>Research Experience</h3>
-            <div class="experience-list">
-              <div class="exp-item">
-                <div class="exp-header">
-                  <div class="exp-title">School of Physics and Astronomy, Beijing Normal University</div>
-                  <div class="exp-years">Dec. 2023&ndash;present</div>
+            <div class="cv-block" id="cv-research">
+              <h3>Research Experience</h3>
+              <div class="experience-list">
+                <div class="exp-item">
+                  <div class="exp-header">
+                    <div class="exp-title">School of Physics and Astronomy, Beijing Normal University</div>
+                    <div class="exp-years">Dec. 2023&ndash;present</div>
+                  </div>
+                  <div class="exp-note">Advisor: Prof. Yu-Han Ma</div>
+                  <ul class="exp-list">
+                    <li>Developed a coercivity-landscape framework to characterize finite-time and finite-size scaling behaviors in dynamic hysteresis using renormalization techniques.</li>
+                    <li>Performed kinetic Monte Carlo simulations of the two-dimensional Ising model in driven systems.</li>
+                    <li>Studied finite-time thermodynamics and performance trade-offs in information machines.</li>
+                  </ul>
                 </div>
-                <div class="exp-note">Advisor: Prof. Yu-Han Ma</div>
-                <ul class="exp-list">
-                  <li>Developed a coercivity-landscape framework to characterize finite-time and finite-size scaling behaviors in dynamic hysteresis using renormalization techniques.</li>
-                  <li>Performed kinetic Monte Carlo simulations of the two-dimensional Ising model in driven systems.</li>
-                  <li>Studied finite-time thermodynamics and performance trade-offs in information machines.</li>
-                </ul>
-              </div>
 
-              <div class="exp-item">
-                <div class="exp-header">
-                  <div class="exp-title">Department of Physics, Jiangxi Normal University</div>
-                  <div class="exp-years">Feb. 2023&ndash;Jun. 2024</div>
+                <div class="exp-item">
+                  <div class="exp-header">
+                    <div class="exp-title">Department of Physics, Jiangxi Normal University</div>
+                    <div class="exp-years">Feb. 2023&ndash;Jun. 2024</div>
+                  </div>
+                  <div class="exp-note">Advisor: Prof. Hui-Huang Chen</div>
+                  <ul class="exp-list">
+                    <li>Investigated symmetry breaking and entanglement-related quantities in conformal field theories.</li>
+                    <li>Implemented numerical tests of CFT predictions using exactly solvable lattice models.</li>
+                  </ul>
                 </div>
-                <div class="exp-note">Advisor: Prof. Hui-Huang Chen</div>
-                <ul class="exp-list">
-                  <li>Investigated symmetry breaking and entanglement-related quantities in conformal field theories.</li>
-                  <li>Implemented numerical tests of CFT predictions using exactly solvable lattice models.</li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div class="cv-block" id="cv-teaching">
-            <h3>Teaching Experience</h3>
-            <ul class="teaching-list">
-              <li>Teaching Assistant, College Physics at BNU, 2025.</li>
-              <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
-            </ul>
-          </div>
+            <div class="cv-block" id="cv-teaching">
+              <h3>Teaching Experience</h3>
+              <ul class="teaching-list">
+                <li>Teaching Assistant, College Physics at BNU, 2025.</li>
+                <li>Teaching Assistant, Advanced Mathematics at JXNU, 2021&ndash;2023.</li>
+              </ul>
+            </div>
 
-          <div class="cv-block" id="cv-conferences">
-            <h3>Conferences</h3>
-            <ul class="conference-list">
-              <li><span class="conf-title">International Conference on Statistical Physics (29th)</span>, Florence, Italy.<br><span class="conf-meta">Poster: <a href="images/Poster_Italy.pdf" target="_blank" rel="noopener"><em>Coercivity Panorama of Dynamic Hysteresis</em></a><a class="pdf-tag" href="images/Poster_Italy.pdf" target="_blank" rel="noopener">PDF</a>. Jul. 13&ndash;18, 2025.</span></li>
-              <li><span class="conf-title">Progress in Quantum Machine Learning (2026)</span>, Beijing, China.<br><span class="conf-meta">Poster: <a href="images/Poster_QML.pdf" target="_blank" rel="noopener"><em>Coercivity Landscape Characterizes Dynamic Hysteresis</em></a><a class="pdf-tag" href="images/Poster_QML.pdf" target="_blank" rel="noopener">PDF</a>. May 10, 2026.</span></li>
-              <li><span class="conf-title">National Conference on Magnetics Theory (20th)</span>, Hangzhou, China.<br><span class="conf-meta">Poster: <em>Coercivity Landscape Characterizes Dynamic Hysteresis</em>. May 22&ndash;25, 2026.</span></li>
-            </ul>
+            <div class="cv-block" id="cv-conferences">
+              <h3>Conferences</h3>
+              <ul class="conference-list">
+                <li><span class="conf-title">International Conference on Statistical Physics (29th)</span>, Florence, Italy.<br><span class="conf-meta">Poster: <a href="images/Poster_Italy.pdf" target="_blank" rel="noopener"><em>Coercivity Panorama of Dynamic Hysteresis</em></a><a class="pdf-tag" href="images/Poster_Italy.pdf" target="_blank" rel="noopener">PDF</a>. Jul. 13&ndash;18, 2025.</span></li>
+                <li><span class="conf-title">Progress in Quantum Machine Learning (2026)</span>, Beijing, China.<br><span class="conf-meta">Poster: <a href="images/Poster_QML.pdf" target="_blank" rel="noopener"><em>Coercivity Landscape Characterizes Dynamic Hysteresis</em></a><a class="pdf-tag" href="images/Poster_QML.pdf" target="_blank" rel="noopener">PDF</a>. May 10, 2026.</span></li>
+                <li><span class="conf-title">National Conference on Magnetics Theory (20th)</span>, Hangzhou, China.<br><span class="conf-meta">Poster: <em>Coercivity Landscape Characterizes Dynamic Hysteresis</em>. May 22&ndash;25, 2026.</span></li>
+              </ul>
+            </div>
           </div>
-          <a class="back-top" href="#top">Back to top ↑</a>
-        </div>
         </div>
       </section>
-
     </main>
   </div>
 
   <footer class="footer">
-    <span>© 2026 Miao Chen. Last updated: May 2026.</span>
-    <a class="footer-back-top" href="#top">Back to top ↑</a>
+    © 2026 Miao Chen. Last updated: May 2026.
   </footer>
   <script>
-    (function () {
-      function showCV(scrollToCV) {
-        document.body.classList.add('show-cv');
-        if (scrollToCV) {
-          setTimeout(function () {
-            var cv = document.getElementById('cv');
-            if (cv) cv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 0);
-        }
+    function updateCvVisibility() {
+      const cvSection = document.getElementById('cv');
+      if (!cvSection) return;
+      const hash = window.location.hash || '';
+      if (hash === '#cv' || hash.startsWith('#cv-')) {
+        cvSection.classList.add('cv-open');
+        const target = document.querySelector(hash);
+        setTimeout(() => (target || cvSection).scrollIntoView({ block: 'start' }), 0);
+      } else {
+        cvSection.classList.remove('cv-open');
       }
+    }
 
-      function hideCV() {
-        document.body.classList.remove('show-cv');
-      }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        if (window.location.hash && window.location.hash.indexOf('#cv') === 0) {
-          showCV(false);
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-          link.addEventListener('click', function () {
-            var target = link.getAttribute('href');
-            if (target && target.indexOf('#cv') === 0) {
-              showCV(target === '#cv');
-            } else {
-              hideCV();
-            }
-          });
-        });
-      });
-    })();
+    window.addEventListener('DOMContentLoaded', updateCvVisibility);
+    window.addEventListener('hashchange', updateCvVisibility);
   </script>
-
 </body>
 </html>
